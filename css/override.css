@@ -1,0 +1,269 @@
+/***************** HEADER NAVIGATION BAR **********************/
+  .affix {
+        top: 0;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .affix + .container-fluid {
+        padding-top: 70px;
+    }
+
+  .nav li, .navbar-brand {
+      font-family: 'Tangerine', cursive, sans-serif;
+      font-size: 2em;
+      padding-left:  30px;
+      color: #1387CE;
+  }
+  .nav li:hover, .navbar-brand {
+    color: #093a58;
+  }
+
+  .navbar-brand {
+    color: #093a58!important;
+  }
+
+  .nav li ul li {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    padding: 0;
+  }
+
+  .header1 {
+      font-family: 'Tangerine', cursive, sans-serif;
+      font-size: 2em;
+      padding-left:  30px;
+      color: #093a58;
+  }
+
+  .navbar {
+      margin-bottom: 0;
+      color: #fff;
+      background-color: #fff;
+  }
+
+  .ontop {
+      z-index: 1;
+  }
+  .glyphicon-globe {
+    font-size: 20px;
+  }
+/***************** HEADER NAVIGATION BAR END ******************/
+/***************** MAIN CAROUSEL ******************************/
+  #websiteTitle{
+    font-size: 10em;
+    vertical-align: middle;
+    font-family: 'Pacifico', cursive;
+    padding-left: 15px;
+    color: #191970;
+  }
+  #websiteSlogan{
+    font-size: 5.4em;
+  }
+
+  #theCarousel .slide1{
+    background-image: url('../img/01.jpg');
+    height: 480px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  #theCarousel .slide2{
+    background-image: url('../img/02.jpg');
+    height: 480px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  #theCarousel .slide3{
+    background-image: url('../img/03.jpg');
+    height: 480px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  #theCarousel .slide4{
+    background-image: url('../img/04.jpg');
+    height: 480px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  #theCarousel .slide5{
+    background-image: url('../img/05.jpg');
+    height: 480px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  #theCarousel .carousel-caption h1{
+    font-size: 5.4em;
+    font-family: 'Pacifico', cursive;
+    padding-bottom: .4em;
+  }
+  #theCarousel .carousel-caption p{
+    font-size: 2em;
+  }
+
+  #theCarousel .carousel-control.left, .carousel-control.right {
+      background-image: none
+  }
+  #theCarousel .carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+    max-width: none;
+  }
+
+  #theCarousel .carousel-indicators {
+    display:none;
+  }
+
+  :target:before {
+  content:"";
+  display:block;
+  height:60px;
+  margin:-60px 0 0;
+  }
+
+  #theCarousel .reverse {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+/***************** MAIN CAROUSEL END **************************/
+/***************** RESERVATION FORM ***************************/
+  .notbold {
+    font-weight: normal;
+  }
+
+  #datepicker {
+    z-index: 0;
+  }
+
+  .center {
+    text-align: center;
+  }
+/***************** RESERVATION FORM END ***********************/
+/***************** CAROUSEL: ROOMS ****************************/
+
+  .header-rooms {
+    background-color: #e0e0e0;
+    color: #154360;
+    border-radius: 5px;
+    border-color: #154360;
+    font-size: calc(8px + .5vw);
+  }
+
+  .footer-rooms {
+    background-color: #fff;
+    color: #154360;
+    border-radius: 5px;
+  }
+
+  .container-rooms {
+    width: 80%;
+    margin: auto;
+  }
+
+  .glyphicon-play {
+    color: #DC7633;
+  }
+
+  .name a {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .inlineblock {
+      display: inline-block;
+      font-size: calc(7px + .5vw);
+  }
+
+  .room1, .room2, .room3 {
+      font-size: calc(6px + .7vw);
+  }
+
+  .room1, .room2 {
+      padding-top: 5px;
+  }
+
+  .inlineblock img {
+      width: 20px;
+      padding-top: 2px;
+  }
+
+  .carousel-transparent {
+      background-image:  none!important;
+  }
+
+  #myCarousel img {
+      width: 100%;
+  }
+
+  .modal-fullscreen {
+    background: transparent;
+  }
+  .modal-fullscreen .modal-content {
+    background: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .modal-backdrop.modal-backdrop-fullscreen {
+    background: #ffffff;
+  }
+  .modal-backdrop.modal-backdrop-fullscreen.in {
+    opacity: .97;
+    filter: alpha(opacity=97);
+  }
+
+  .turnaround img {
+    max-height: 92vh;
+    width: auto!important;
+    margin: 0 auto;
+  }
+
+  .item {
+    max-height: 90vh;
+  }
+
+  .carousel {
+    overflow: hidden;
+  }
+
+  .modal-header {
+    background: white;
+    color: white;
+  }
+
+  .nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .btn-link {
+    font-size: calc(7px + .5vw);
+    text-decoration: underline;
+  }
+
+  .responsivefont {
+    font-size: calc(7.5px + .5vw);
+  }
+/***************** CAROUSEL: ROOMS END ************************/
+/***************** FOOTER *************************************/
+  .footer {
+    color: #093a58;
+    background-color: #e0e0e0;
+    padding: 10px;
+  }
+  .footertext {
+    text-align: center;
+    font-size: 12px;
+  }
+  .footer p {
+    padding: 0;
+    margin: 0;
+  }
+/***************** FOOTER END *********************************/
