@@ -1,3 +1,37 @@
+/***************** TOP BAR **********************/
+  #topbar {
+    height: 40px;
+    width: 100%;
+    background-color: #272727;
+    color: #939393;
+  }
+  #topbar p {
+    display: inline-block;
+    margin: 0px;
+  }
+  #topbar a {
+    color: #939393;
+    font-family: Helvetica;
+    font-size: 11px;
+    transition-property: color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+    transition-delay: initial;
+  }
+  #topbar a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  #topbar a:focus {
+    color: white;
+    text-decoration: none;
+  }
+  #topbar .dropdown-menu a:hover {
+    color: black;
+  }
+
+/***************** END TOP BAR **********************/
+
 /***************** HEADER NAVIGATION BAR **********************/
   .affix {
         top: 0;
@@ -50,6 +84,10 @@
   }
 /***************** HEADER NAVIGATION BAR END ******************/
 /***************** MAIN CAROUSEL ******************************/
+  #theCarousel {
+    width: 100%;
+  }
+
   #websiteTitle{
     font-size: 10em;
     vertical-align: middle;

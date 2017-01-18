@@ -37,12 +37,42 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css">
       <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
       <link rel="stylesheet" href="css/font-awesome.min.css">
       <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
       <link rel="stylesheet" href="css/override.css">
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="80">
+
+  <!-- TOP BAR -->
+    <div id="topbar">
+      <div style="padding: 10px; margin-left: 15px; display: inline-block;" class="text-left">
+        <a href="tel:+393284833173">
+          <span class="glyphicon glyphicon-earphone"></span>&nbsp; +39 328 4833173</a> |
+        <a href="mailto:info@albergodieri.it">
+          <span class="glyphicon glyphicon-envelope"></span>&nbsp; info(at)albergodieri.it</a>
+      </div>
+      <div style="padding: 10px; margin-right: 15px; display: inline-block; float: right;" class="text-right">
+        <div class="dropdown" style="display: inline-block;">
+          <a href="#" class="dropdown-toggle" id="languageMenuTop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span class="glyphicon glyphicon-globe" style="font-size: 14px;"></span>&nbsp; Language</a>
+            <ul class="dropdown-menu" aria-labelledby="languageMenuTop">
+              <li><a role="menuitem" tabindex="-1" href="#">English</a></li>
+              <li><a role="menuitem" tabindex="-1" href="#">Italiano</a></li>
+              <li><a role="menuitem" tabindex="-1" href="#">Espa&ntilde;ol</a></li>
+              <li><a role="menuitem" tabindex="-1" href="#">Fran&ccedil;ais</a></li>
+              <li><a role="menuitem" tabindex="-1" href="#">Nederlands</a></li>
+              <li><a role="menuitem" tabindex="-1" href="#">Deutsch</a></li>
+              <li><a role="menuitem" tabindex="-1" href="#">&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
+        </div> |
+        <div style="display: inline-block;">
+          <a href="https://www.facebook.com/BedAndBreakfastLAlbergoDiIeri/">
+            <i class="fa fa-facebook" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    <!--  TOP BAR END -->
     <!-- ++++++++++++++++++++++++++++++ MAIN CAROUSEL +++++++++++++++++++++++++++++++++++-->
       <div id="theCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
