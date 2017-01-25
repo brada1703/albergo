@@ -12,7 +12,7 @@
   #topbar a {
     color: #939393;
     font-family: Helvetica;
-    font-size: 11px;
+    font-size: calc(8px + .2vw);
     transition-property: color;
     transition-duration: 0.2s;
     transition-timing-function: ease-in;
@@ -29,9 +29,23 @@
   #topbar .dropdown-menu a:hover {
     color: black;
   }
-
+  #topbar .text-left {
+    padding: calc(6px + .2vw);
+    margin-left: 1%;
+    display: inline-block;
+  }
+  #topbar .text-right {
+    padding:  calc(6px + .2vw);
+    margin-right: 1%;
+    display: inline-block;
+    float: right;
+  }
 /***************** END TOP BAR **********************/
-
+/***************** PHP RESERVATION ERROR **********************/
+/*.reservationerror {
+  margin-bottom: -20px;
+}*/
+/***************** PHP RESERVATION ERROR END **********************/
 /***************** HEADER NAVIGATION BAR **********************/
   .affix {
         top: 0;
@@ -83,6 +97,7 @@
     font-size: 20px;
   }
 /***************** HEADER NAVIGATION BAR END ******************/
+
 /***************** MAIN CAROUSEL ******************************/
   #theCarousel {
     width: 100%;
@@ -98,9 +113,8 @@
   #websiteSlogan{
     font-size: 5.4em;
   }
-
   #theCarousel .slide1{
-    background-image: url('../img/01.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('../img/01.jpg');
     height: 480px;
     background-repeat: no-repeat;
     background-position: center;
@@ -114,7 +128,7 @@
     background-size: cover;
   }
   #theCarousel .slide3{
-    background-image: url('../img/03.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/03.jpg');
     height: 480px;
     background-repeat: no-repeat;
     background-position: center;
@@ -128,20 +142,24 @@
     background-size: cover;
   }
   #theCarousel .slide5{
-    background-image: url('../img/05.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/05.jpg');
     height: 480px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   #theCarousel .carousel-caption h1{
-    font-size: 5.4em;
+    font-size: calc(15px + 4vw);
     font-family: 'Pacifico', cursive;
     padding-bottom: .4em;
   }
   #theCarousel .carousel-caption p{
-    font-size: 2em;
+    font-size: calc(10px + 2vw);
+    margin-bottom: 120px;
   }
+  /*  #theCarousel .booknow {
+      margin-top: 50px;
+    }*/
 
   #theCarousel .carousel-control.left, .carousel-control.right {
       background-image: none
@@ -170,7 +188,318 @@
     unicode-bidi: bidi-override;
     direction: rtl;
   }
+  .carousel-caption {
+    padding-bottom: 100px;
+  }
 /***************** MAIN CAROUSEL END **************************/
+
+/*++++++++++++++++++ REGISTRATION BAR ++++++++++++++++++*/
+  #registrationform carousel-reviews.registration .form-inline,
+  #registrationform .booknow .center {
+      text-align: center;
+  }
+  #registrationform .dates {
+      margin-top: 10px;
+  }
+  #registrationform {
+      background-color: white;
+      width: 90%;
+      margin: auto;
+      border-radius: 5px;
+      border-color: green;
+      padding: 10px;
+      margin-top: -65px;
+      position: relative;
+      margin-bottom: 11px;
+  }
+  #registrationform .registration {
+      width: 99%;
+      margin: auto;
+  }
+  #registrationform .col-sm-1,
+  #registrationform .col-sm-2,
+  #registrationform .col-sm-3,
+  #registrationform .col-sm-4 {
+      padding-right: 5px !important;
+      padding-left: 5px !important;
+  }
+  #registrationform .registration input[type="email"],
+  #registrationform .registration input[type="tel"],
+  #registrationform .registration select[id="sel1"],
+  #registrationform .registration select[id="sel2"] {
+     font-size: calc(7px + .6vw);
+      width: 100%;
+  }
+  #registrationform .btn-md {
+      font-size: calc(6px + .6vw);
+      width: 115%;
+      text-align: center;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+  }
+  @media only screen and (max-width : 768px)  {
+      #registrationform .btn-md {
+      width: 100%;
+      font-size: 12px;
+      }
+      #registrationform .registration input[type="email"],
+      #registrationform .registration input[type="tel"],
+      #registrationform .registration select[id="sel1"],
+      #registrationform .registration select[id="sel2"] {
+         font-size: 12px;
+          width: 100%;
+      }
+   }
+   .robot {
+     height: 150px;
+   }
+/*++++++++++++++++++ REGISTRATION BAR END ++++++++++++++++++*/
+
+/*++++++++++++++++++ ROOMS LIST ++++++++++++++++++*/
+    .titlerow {
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #5e5e5e;
+        font-family: 'Open Sans', sans-serif;
+    }
+    hr {
+         border: 1px solid #EEE;
+         vertical-align: middle;
+    }
+    .titlerow h2 {
+        font-family: 'Tangerine', cursive, sans-serif;
+        font-size: 2em;
+        color: #093a58;
+    }
+    #roomslist .montage-wrap {
+        width: 352px;
+        height: 286px;
+        border-style: solid;
+        border-color: #093a58;
+        border-width: 1px;
+        font: 13px;
+        font-family: 'Open Sans', sans-serif;
+        color: #093a58;
+    }
+    #roomslist .montage-block {
+        width: 350px;
+        height: 280px;
+        float: left;
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+    #roomslist .block1 {
+        width: 350px;
+        height: 280px;
+        position: absolute;
+        display: inline-block;
+        transition: transform .75s ease-out;
+    }
+    #roomslist .montage-block:hover .block1 {
+        transform: translateY(-230px);
+    }
+    #roomslist .roompicture-altracamera {
+        background: url("http://www.albergodiieri.com/img/laltracamera/01small.jpg") center, no-repeat;
+        height: 230px;
+        width: 100%;
+    }
+    #roomslist .roompicture-camerarosa {
+        background: url("http://www.albergodiieri.com/img/camerarosa/12bed-right-small.jpg") center, no-repeat;
+        height: 230px;
+        width: 100%;
+    }
+    #roomslist .roompicture-cameragialla {
+        background: url("http://www.albergodiieri.com/img/cameragialla/07bedsmall.jpg") center, no-repeat;
+        height: 230px;
+        width: 100%;
+    }
+    #roomslist .roominfo {
+        height: 50px;
+    }
+    #roomslist .name {
+        height: 50px;
+        width: 175px;
+        float: left;
+        background: white;
+    }
+    #roomslist .name p, .price p {
+        text-align: center;
+        padding: 15px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    #roomslist .price {
+        height: 50px;
+        width: 175px;
+        float:right;
+        background: #F0FFFF;
+        color: #75c5cf;
+    }
+
+    #roomslist .thumb_content {
+        padding-top: 50px;
+    }
+    #roomslist .titleinfo h1 {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 14px;
+    }
+    #roomslist .titleinfo p {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 12px;
+    }
+    #roomslist .left {
+        width: 175px;
+        height: 90px;
+        float: left;
+        padding-left: 25px;
+    }
+    #roomslist .left p {
+        font-size: 12px;
+    }
+    #roomslist .left p img, .right p img{
+        width: 14px;
+    }
+    #roomslist .right {
+        font-size: 12px;
+        height: 90px;
+    }
+    #roomslist .booknow {
+        margin-top: 5px;
+        text-align: center;
+    }
+    #roomslist {
+        margin-right: auto;
+        margin-left: auto;
+    }
+/*++++++++++++++++++ ROOMS LIST END ++++++++++++++++++*/
+
+/*++++++++++++++++++ AMENITIES ++++++++++++++++++*/
+    .amenities {
+        text-align: center;
+    }
+    .roundelement {
+        width: calc(60px + 4vw);
+        height: calc(60px + 4vw);
+        background:#fff;
+        border-radius: 50%;
+        border-color: #093a58;
+        border-style: solid;
+        border-width: 1px;
+        transition:all 1s ease;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .roundelement p {
+        padding-top: calc(10% + 1vw);
+    }
+    .roundelement:hover {
+        background: #5e5e5e;
+    }
+    .roundelement:hover p{
+        animation: shake 1.2s cubic-bezier(.36,.07,.19,.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+        color: #fff;
+    }
+
+    @keyframes shake {
+        10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+        }
+        20%, 80% {
+        transform: translate3d(2px, 0, 0);
+        }
+        30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+        }
+        40%, 60% {
+        transform: translate3d(4px, 0, 0);
+        }
+    }
+    .amenitytitle {
+        margin-top: 10px;
+    }
+    .roundelement:hover svg path{
+        fill: white!important;
+    }
+    .roundelement p svg {
+        height: 50px;
+    }
+/*++++++++++++++++++ AMENITIES END ++++++++++++++++++*/
+
+/*++++++++++++++++++ REVIEWS ++++++++++++++++++*/
+  #carousel-reviews {
+      height: 428px;
+  }
+  #carousel-reviews .TA_selfserveprop {
+      margin: auto;
+      text-align: center;
+  }
+  #carousel-reviews .item img {
+      margin: auto;
+  }
+  #carousel-reviews .center {
+      margin: auto!important;
+  }
+
+  #carousel-reviews .carousel-control.left, #carousel-reviews .carousel-control.right {
+      background-image: none
+  }
+  #carousel-reviews .roundelement {
+      width: calc(60px + 4vw);
+      height: calc(60px + 4vw);
+      background:#fff;
+      border-radius: 50%;
+      border-color: #093a58;
+      border-style: solid;
+      border-width: 1px;
+      transition:all 1s ease;
+      text-align: center;
+      margin: 0 auto;
+  }
+  #carousel-reviews .roundelement p {
+      padding-top: calc(10% + 1vw);
+  }
+  #carousel-reviews .roundelement:hover {
+      background: #5e5e5e;
+  }
+  #carousel-reviews .roundelement:hover p{
+      animation: shake 1.2s cubic-bezier(.36,.07,.19,.97) both;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      perspective: 1000px;
+      color: #fff;
+  }
+
+  @keyframes shake {
+      10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+      }
+      20%, 80% {
+      transform: translate3d(2px, 0, 0);
+      }
+      30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+      }
+      40%, 60% {
+      transform: translate3d(4px, 0, 0);
+      }
+  }
+  #carousel-reviews .amenitytitle {
+      margin-top: 10px;
+  }
+  #carousel-reviews .roundelement:hover svg path{
+      fill: white!important;
+  }
+  #carousel-reviews .roundelement p svg {
+      height: 50px;
+  }
+/*++++++++++++++++++ REVIEWS END ++++++++++++++++++*/
+
 /***************** RESERVATION FORM ***************************/
   .notbold {
     font-weight: normal;
@@ -184,6 +513,7 @@
     text-align: center;
   }
 /***************** RESERVATION FORM END ***********************/
+
 /***************** CAROUSEL: ROOMS ****************************/
 
   .header-rooms {
@@ -290,6 +620,7 @@
     font-size: calc(7.5px + .5vw);
   }
 /***************** CAROUSEL: ROOMS END ************************/
+
 /***************** FOOTER *************************************/
   .footer {
     color: #093a58;
