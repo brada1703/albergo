@@ -42,9 +42,9 @@
   }
 /***************** END TOP BAR **********************/
 /***************** PHP RESERVATION ERROR **********************/
-/*.reservationerror {
-  margin-bottom: -20px;
-}*/
+  /*.reservationerror {
+    margin-bottom: -20px;
+  }*/
 /***************** PHP RESERVATION ERROR END **********************/
 /***************** HEADER NAVIGATION BAR **********************/
   .affix {
@@ -97,7 +97,6 @@
     font-size: 20px;
   }
 /***************** HEADER NAVIGATION BAR END ******************/
-
 /***************** MAIN CAROUSEL ******************************/
   #theCarousel {
     width: 100%;
@@ -192,7 +191,6 @@
     padding-bottom: 100px;
   }
 /***************** MAIN CAROUSEL END **************************/
-
 /*++++++++++++++++++ REGISTRATION BAR ++++++++++++++++++*/
   #registrationform carousel-reviews.registration .form-inline,
   #registrationform .booknow .center {
@@ -254,7 +252,6 @@
      height: 150px;
    }
 /*++++++++++++++++++ REGISTRATION BAR END ++++++++++++++++++*/
-
 /*++++++++++++++++++ ROOMS LIST ++++++++++++++++++*/
     .titlerow {
         padding-left: 10px;
@@ -271,6 +268,12 @@
         font-size: 2em;
         color: #093a58;
     }
+    #roomslist {
+        margin: auto;
+    }
+    #roomslist .col-sm-12, #roomslist .col-xs-12 {
+      padding-top: 10px;
+    }
     #roomslist .montage-wrap {
         width: 352px;
         height: 286px;
@@ -280,6 +283,7 @@
         font: 13px;
         font-family: 'Open Sans', sans-serif;
         color: #093a58;
+        margin: auto;
     }
     #roomslist .montage-block {
         width: 350px;
@@ -336,7 +340,6 @@
         background: #F0FFFF;
         color: #75c5cf;
     }
-
     #roomslist .thumb_content {
         padding-top: 50px;
     }
@@ -370,15 +373,13 @@
         margin-top: 5px;
         text-align: center;
     }
-    #roomslist {
-        margin-right: auto;
-        margin-left: auto;
-    }
 /*++++++++++++++++++ ROOMS LIST END ++++++++++++++++++*/
-
 /*++++++++++++++++++ AMENITIES ++++++++++++++++++*/
     .amenities {
         text-align: center;
+    }
+    .amenities h5 {
+      font-size: calc(8px + 1vw);
     }
     .roundelement {
         width: calc(60px + 4vw);
@@ -422,6 +423,11 @@
     }
     .amenitytitle {
         margin-top: 10px;
+        color: #5e5e5e;
+    }
+    .moreinfo {
+      color: #5e5e5e;
+      font-size: calc(8px + .5vw);
     }
     .roundelement:hover svg path{
         fill: white!important;
@@ -430,8 +436,13 @@
         height: 50px;
     }
 /*++++++++++++++++++ AMENITIES END ++++++++++++++++++*/
-
 /*++++++++++++++++++ REVIEWS ++++++++++++++++++*/
+  #reviewtext {
+    padding-left: 50px;
+  }
+  #reviewtext h5 {
+      font-size: calc(8px + 1vw);
+    }
   #carousel-reviews {
       height: 428px;
   }
@@ -499,7 +510,6 @@
       height: 50px;
   }
 /*++++++++++++++++++ REVIEWS END ++++++++++++++++++*/
-
 /***************** RESERVATION FORM ***************************/
   .notbold {
     font-weight: normal;
@@ -513,7 +523,6 @@
     text-align: center;
   }
 /***************** RESERVATION FORM END ***********************/
-
 /***************** CAROUSEL: ROOMS ****************************/
 
   .header-rooms {
@@ -620,7 +629,6 @@
     font-size: calc(7.5px + .5vw);
   }
 /***************** CAROUSEL: ROOMS END ************************/
-
 /***************** FOOTER *************************************/
   .footer {
     color: #093a58;
@@ -636,3 +644,44 @@
     margin: 0;
   }
 /***************** FOOTER END *********************************/
+/***************** GALLERY *********************************/
+  .imagecarousels {
+    width: 90%;
+    margin: auto;
+  }
+  .imagecarousels h3 {
+    font-family: 'Tangerine', cursive, sans-serif;
+    font-size: 2em;
+    color: #000;
+    background-color: white;
+    opacity: 0.8;
+    width: 150px;
+    margin: auto;
+    font-weight: 900;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .imagecarousels p {
+    /*    font-family: 'Tangerine', cursive, sans-serif;
+    font-size: 2em;*/
+    color: #093a58;
+    background-color: white;
+    opacity: 0.8;
+    width: 150px;
+    margin: auto;
+    font-weight: 500;
+    border-radius: 0px 0px 10px 10px;
+  }
+  .imagecarousels .carousel-caption {
+    padding-bottom: 25px !important;
+  }
+/***************** GALLERY END *********************************/
+/***************** CONTACT *********************************/
+  .contactus {
+    width: 90%;
+    margin: auto;
+  }
+  .googlemap {
+    width: 90%;
+    margin: auto;
+  }
+/***************** CONTACT END *********************************/

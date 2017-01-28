@@ -71,11 +71,50 @@
           </div>
         </div>
     <!--  TOP BAR END -->
+
     <!-- ++++++++++++++++++++++++++++++ PHP Reservation Error +++++++++++++++++++++++++++++++++++-->
       <div class="reservationerror">
         <?php echo $result; ?>
       </div>
     <!-- ++++++++++++++++++++++++++++++ PHP Reservation Error +++++++++++++++++++++++++++++++++++-->
+
+    <!-- ++++++++++++++++++++++++++++++ NAVBAR  +++++++++++++++++++++++++++++++++++++++++-->
+      <nav class="navbar navbar-default ontop">
+        <div class="container-fluid"  data-spy="affix" data-offset-top="40">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <img src="http://albergodiieri.com/img/logo.jpg" class="pull-left" style="height: 35px; margin-top: 5px;">
+            <a class="navbar-brand" href="#" style="margin-left: -29px;">Albergo di Ieri</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Home</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.php">Contact</a></li>
+          <!--<li><div class="dropdown">
+                    <button class="btn btn-link dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-globe" style="vertical-align:bottom"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">English</a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Italiano</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Espa&ntilde;ol</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fran&ccedil;ais</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nederlands</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Deutsch</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
+                    </ul>
+                  </div>
+                </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- ++++++++++++++++++++++++++++++ NAVBAR END ++++++++++++++++++++++++++++++++++++++-->
 
     <!-- ++++++++++++++++++++++++++++++ MAIN CAROUSEL +++++++++++++++++++++++++++++++++++-->
       <div id="theCarousel" class="carousel slide" data-ride="carousel">
@@ -217,43 +256,6 @@
       </div>
     <!-- ++++++++++++++++++++++++++++++ RESERVATION BAR  END +++++++++++++++++++++++++++++++++++++++++-->
 
-    <!-- ++++++++++++++++++++++++++++++ NAVBAR  +++++++++++++++++++++++++++++++++++++++++-->
-     <!--  <nav class="navbar navbar-default ontop">
-        <div class="container-fluid"  data-spy="affix" data-offset-top="480">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">l'Albergo di Ieri</a>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#about">About</a></li>
-              <li><a href="#region">Region</a></li>
-              <li><a href="#rooms">Rooms</a></li>
-              <li><a href="#reserve">Reserve</a></li>
-              <li><div class="dropdown">
-                    <button class="btn btn-link dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-                    <span class="glyphicon glyphicon-globe" style="vertical-align:bottom"></span></button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">English</a></li>
-                      <li role="presentation" class="divider"></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Italiano</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Espa&ntilde;ol</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fran&ccedil;ais</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nederlands</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Deutsch</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
-                    </ul>
-                  </div></li>
-            </ul>
-          </div>
-        </div>
-      </nav> -->
-    <!-- ++++++++++++++++++++++++++++++ NAVBAR END ++++++++++++++++++++++++++++++++++++++-->
-
     <!-- ++++++++++++++++++++++++++++++ ABOUT + REGION ++++++++++++++++++++++++++++++++++-->
      <!--      <div class="container">
             <div class="row">
@@ -310,7 +312,7 @@
       </div>
 
       <div class="row" class="text-center" id="roomslist">
-          <div class="col-md-4">
+          <div class="col-lg-4 col-sm-6 col-xs-12">
               <div class="montage-wrap">
                   <div class="montage-block">
                       <div class="block1">
@@ -350,7 +352,7 @@
                   </div>
               </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-lg-4 col-sm-6 col-xs-12">
               <div class="montage-wrap">
                   <div class="montage-block">
                       <div class="block1">
@@ -367,7 +369,7 @@
                       <div class="thumb_content">
                           <div class="titleinfo">
                               <h1>Camera Oleandro</h1>
-                              <p>Junior Suite with large king size bed and comfortable shower with separate kitchen, the perfect shelter to feel at home.</p>
+                              <p>Room for two people with double bed, private bathroom, and a view of the garden and mountains.</p>
                           </div>
                           <div class="infolist">
                               <div class="left">
@@ -389,7 +391,7 @@
                   </div>
               </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-lg-4 col-sm-12 col-xs-12">
               <div class="montage-wrap">
                   <div class="montage-block">
                       <div class="block1">
@@ -406,7 +408,7 @@
                       <div class="thumb_content">
                           <div class="titleinfo">
                               <h1>Camera Gelsomino</h1>
-                              <p>Junior Suite with large king size bed and comfortable shower with separate kitchen, the perfect shelter to feel at home.</p>
+                              <p>Room for two people with double bed, private bathroom, and a view of the garden and mountains.</p>
                           </div>
                           <div class="infolist">
                               <div class="left">
@@ -454,7 +456,12 @@
                       </svg>
                   </p>
               </div>
-              <div class="amenitytitle">Breakfast Included</div>
+              <div class="amenitytitle">
+                <h5>Breakfast Included</h5>
+              </div>
+              <div class="moreinfo">
+                <p>Warm hospitality starts with breakfast. Our guests can enjoy a classic Italian breakfast enriched with delicious typical products, such as homemade jam, cakes, and ricotta.</p>
+              </div>
           </div>
           <div class="col-xs-3 amenity2">
               <div class="roundelement">
@@ -488,12 +495,17 @@
                       </svg>
                   </p>
               </div>
-              <div class="amenitytitle">Pets Allowed</div>
+              <div class="amenitytitle">
+                <h5>Pets Allowed</h5>
+              </div>
+              <div class="moreinfo">
+                <p>Your dog and cat are welcome at Albergo di Ieri. We have a separate little abode for our fuzzy, four-footed friends.</p>
+              </div>
           </div>
           <div class="col-xs-3 amenity3">
               <div class="roundelement">
                   <p>
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      <!--<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                            viewBox="0 0 285 285" style="enable-background:new 0 0 285 285" xml:space="preserve">
                           <path d="M142.5,0C63.934,0,0,63.934,0,142.5S63.934,285,142.5,285S285,221.066,285,142.5S221.066,0,142.5,0z M142.5,271.424
                               c-71.083,0-128.924-57.841-128.924-128.924S71.417,13.576,142.5,13.576S271.424,71.417,271.424,142.5
@@ -501,10 +513,33 @@
                           <path d="M153.138,62.919H98.637c-12.586,0-20.831,4.991-20.831,20.843v120.507c0,10.632,6.928,17.807,17.788,17.807
                               c10.854,0,17.807-7.175,17.807-17.807v-42.336h39.515c34.524,0,54.279-21.065,54.279-49.504
                               C207.194,77.683,183.11,62.919,153.138,62.919z M146.632,134.583H113.4V90.269h29.545c17.584,0,28.661,6.525,28.661,22.16
-                              C171.606,125.881,160.956,134.583,146.632,134.583z"/>
+                              C171.606,125.881,160.956,134.583,146.632,134.583z"/> -->
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                           viewBox="0 0 381.678 381.678" style="enable-background:new 0 0 381.678 381.678" xml:space="preserve">
+                          <path d="M374.989,190.691l-10.216-6.854l-7.761-21.44c-1.352-3.734-4.785-6.315-8.749-6.575l-107.727-7.065
+                            l-31.874-22.369c-16.114-11.308-36.34-15.188-55.494-10.644l-23.529,5.583c-25.215,5.982-49.437,15.61-71.846,28.436
+                            c-0.313-0.03-0.629-0.048-0.95-0.048H29.985l-9.074-9.074c-3.905-3.905-10.237-3.905-14.143,0c-3.905,3.905-3.905,10.237,0,14.143
+                            l12.003,12.003c1.875,1.875,4.419,2.929,7.071,2.929h1.918c-5.84,4.469-11.506,9.177-16.971,14.122
+                            c-2.095,1.896-3.291,4.589-3.291,7.415v8.262L1.04,212.55c-0.684,1.38-1.04,2.9-1.04,4.44c0,12.406,10.093,22.499,22.499,22.499
+                            h36.258c4.41,16.286,19.31,28.304,36.971,28.304s32.562-12.018,36.971-28.304h123.539c4.41,16.286,19.31,28.304,36.971,28.304
+                            s32.562-12.018,36.971-28.304h24.834c10.034,0,18.94-6.746,21.659-16.406l4.435-15.768
+                            C382.881,201.017,380.422,194.336,374.989,190.691z M357.421,217.666c-0.302,1.073-1.291,1.823-2.406,1.823h-24.834
+                            c-4.41-16.286-19.31-28.304-36.971-28.304s-32.562,12.018-36.971,28.304H132.699c-4.41-16.286-19.31-28.304-36.971-28.304
+                            s-32.562,12.018-36.971,28.304H22.499c-0.846,0-1.596-0.423-2.048-1.068l6.009-12.126c0.684-1.38,1.04-2.9,1.04-4.44v-6.113
+                            c30.51-26.634,67.328-45.602,106.755-54.955l23.529-5.583c13.597-3.226,27.952-0.471,39.389,7.555l34.167,23.979
+                            c1.5,1.053,3.261,1.673,5.09,1.793l104,6.821l6.65,18.371c0.724,1.999,2.066,3.716,3.831,4.9l9.982,6.697L357.421,217.666z
+                             M311.514,229.489c0,10.093-8.211,18.304-18.304,18.304s-18.304-8.211-18.304-18.304s8.211-18.304,18.304-18.304
+                            S311.514,219.396,311.514,229.489z M114.032,229.489c0,10.093-8.211,18.304-18.304,18.304s-18.304-8.211-18.304-18.304
+                            s8.211-18.304,18.304-18.304S114.032,219.396,114.032,229.489z"/>
+                      </svg>
                   </p>
               </div>
-              <div class="amenitytitle">Parking</div>
+              <div class="amenitytitle">
+                <h5>Transportation</h5>
+              </div>
+              <div class="moreinfo">
+                <p>If you're close by, we can pick you up. Please mention this in the contact form. There is also free parking in front of the bed and breakfast.</p>
+              </div>
           </div>
           <div class="col-xs-3 amenity4">
               <div class="roundelement">
@@ -554,7 +589,12 @@
                       </svg>
                   </p>
               </div>
-              <div class="amenitytitle">Garden</div>
+              <div class="amenitytitle">
+                <h5>Garden</h5>
+              </div>
+              <div class="moreinfo">
+                <p>The garden is the ideal place to start the day by enjoying some sun or relaxing after a day spent discovering our beautiful region.</p>
+              </div>
           </div>
       </div>
     <!-- ++++++++++++++++++++++++++++++ OUR AMENITIES END ++++++++++++++++++++++++++++++++++++++-->
@@ -570,68 +610,114 @@
           </div>
       <!--++++++++++++++++++++++++++++++++++++ END Title ++++++++++++++++++++++++++++++++++++-->
       <!--++++++++++++++++++++++++++++++++++++ Carousel ++++++++++++++++++++++++++++++++++++-->
-      <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-      <!--   <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
-       -->
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-              <div class="center" style="width: 239px;">
-                  <div id="TA_selfserveprop574" class="TA_selfserveprop img-fluid">
-                      <ul id="SKGjZbUZJx0" class="TA_links J1qKmd">
-                          <li id="8O8VOl0ubu" class="lB15vkg">
-                              <a target="_blank" href="https://www.tripadvisor.com/">
-                                  <img src="https://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor"/>
-                              </a>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-              <script src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=574&amp;locationId=3140630&amp;lang=en_US&amp;rating=true&amp;nreviews=5&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=false&amp;border=true&amp;display_version=2"></script>
-          </div>
-          <div class="item">
-            <div class="center" style="width: 159px;">
-                 <script>
-                      (function() {
-                          var randomId = Math.floor(Math.random() * 100000);
-                          var targetElemId = 'bcom_rwidget_' + randomId;
-                          document.write('<div id="' + targetElemId + '"></div>');
-                          var script   = document.createElement('script');
-                          script.type  = 'text/javascript';
-                          script.async = true;
-                          script.src   = 'http://www.booking.com/review_widget/it/albergo-di-ieri.it.html?tmpl=review_widget/review_widget&wid=' + targetElemId + '&wtype=box_big_feat&hotel_id=364714&widget_language=it';
-                          var node     = document.getElementsByTagName('script')[0];
-                          node.parentNode.insertBefore(script, node);
-                      }());
-                  </script>
+        <!-- <div class="row reviewrow">
+          <div class="col-sm-6 text-center" id="reviewtext">
+            <h5>Our Guests Say</h5>
+            <div class="col-sm-3" style="border: solid red 3px;">
+              <img src="img/svg/booking.png" style="height: 16px;">
+            </div>
+            <div class="col-sm-9" style="border: solid green 3px;">
+              <p>
+                “L'ospitalità dei padroni di casa Il confort dell'arredamento ed il silenzio La torta di mele alla colazione” - Lamberto
+              </p>
             </div>
           </div>
-          <div class="item">
-              <div class="center">
-                  <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsilvia.tinti.777%2Fposts%2F10206415535802231%3A0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+          <div id="carousel-reviews" class="col-sm-6 carousel slide" data-ride="carousel"> -->
+                      <!-- Indicators -->
+                      <!--   <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                      </ol>
+                     -->
+                <!-- Wrapper for slides -->
+         <!--  <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="center" style="width: 239px;">
+                    <div id="TA_selfserveprop574" class="TA_selfserveprop img-fluid">
+                        <ul id="SKGjZbUZJx0" class="TA_links J1qKmd">
+                            <li id="8O8VOl0ubu" class="lB15vkg">
+                                <a target="_blank" href="https://www.tripadvisor.com/">
+                                    <img src="https://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor"/>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <script src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=574&amp;locationId=3140630&amp;lang=en_US&amp;rating=true&amp;nreviews=5&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=false&amp;border=true&amp;display_version=2"></script>
+            </div>
+            <div class="item">
+              <div class="center" style="width: 159px;">
+                   <script>
+                        (function() {
+                            var randomId = Math.floor(Math.random() * 100000);
+                            var targetElemId = 'bcom_rwidget_' + randomId;
+                            document.write('<div id="' + targetElemId + '"></div>');
+                            var script   = document.createElement('script');
+                            script.type  = 'text/javascript';
+                            script.async = true;
+                            script.src   = 'http://www.booking.com/review_widget/it/albergo-di-ieri.it.html?tmpl=review_widget/review_widget&wid=' + targetElemId + '&wtype=box_big_feat&hotel_id=364714&widget_language=it';
+                            var node     = document.getElementsByTagName('script')[0];
+                            node.parentNode.insertBefore(script, node);
+                        }());
+                    </script>
               </div>
+            </div>
+            <div class="item">
+                <div class="center">
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsilvia.tinti.777%2Fposts%2F10206415535802231%3A0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                </div>
+            </div>
+          </div> -->
+
+          <!-- Controls -->
+          <!-- <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        </div> -->
+
+      <!--++++++++++++++++++++++++++++++++++++ END Carousel ++++++++++++++++++++++++++++++++++++-->
+    <!-- ++++++++++++++++++++++++++++++ OUR REVIEWS END ++++++++++++++++++++++++++++++++++++++-->
+    <!-- ++++++++++++++++++++++++++++++ OUR REVIEWS 2 ++++++++++++++++++++++++++++++++++++++-->
+      <div class="container">
+        <div class="row reviews2 justify-content-center">
+          <div class="col-xs-6 col-sm-4 col-sm-offset-2" style="display: flex; justify-content: center;">
+            <div id="TA_cdsratingsonlynarrow422" class="TA_cdsratingsonlynarrow">
+              <ul id="VxROHitY" class="TA_links VrgnLtl6">
+                <li id="jam1Mx6" class="buslrFK9it29">
+                <a target="_blank" href="https://www.tripadvisor.com/">
+                  <img src="https://www.tripadvisor.com/img/cdsi/img2/branding/tripadvisor_logo_transp_340x80-18034-2.png" alt="TripAdvisor"/>
+                </a>
+              </li>
+              </ul>
+            </div>
+            <script src="https://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=422&amp;locationId=3140630&amp;lang=en_US&amp;border=true&amp;display_version=2"></script>
+          </div>
+          <div class="col-xs-6 col-sm-4" style="display: flex; justify-content: center;">
+            <script>
+                (function() {
+                    var randomId = Math.floor(Math.random() * 100000);
+                    var targetElemId = 'bcom_rwidget_' + randomId;
+                    document.write('<div id="' + targetElemId + '"></div>');
+                    var script   = document.createElement('script');
+                    script.type  = 'text/javascript';
+                    script.async = true;
+                    script.src   = 'http://www.booking.com/review_widget/it/albergo-di-ieri.it.html?tmpl=review_widget/review_widget&wid=' + targetElemId + '&wtype=box_big_feat&hotel_id=364714&widget_language=it';
+                    var node     = document.getElementsByTagName('script')[0];
+                    node.parentNode.insertBefore(script, node);
+                }());
+            </script>
           </div>
         </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
-      <!--++++++++++++++++++++++++++++++++++++ END Carousel ++++++++++++++++++++++++++++++++++++-->
-    <!-- ++++++++++++++++++++++++++++++ OUR REVIEWS  ++++++++++++++++++++++++++++++++++++++-->
-    <br><br><br>
-
+    <!-- ++++++++++++++++++++++++++++++ OUR REVIEWS 2 END ++++++++++++++++++++++++++++++++++++++-->
+    <br>
     <!-- ++++++++++++++++++++++++++++++++++++++  ROOMS - ALL  ++++++++++++++++++++++++++++++++++++-->
         <!-- <div class="container">
           <div class="row">
