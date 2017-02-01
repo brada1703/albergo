@@ -27,7 +27,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
   <head>
     <title>l'Albergo di Ieri</title>
       <meta charset="utf-8">
@@ -40,8 +40,22 @@
       <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
       <link rel="stylesheet" href="css/override.css">
       <script src='https://www.google.com/recaptcha/api.js'></script>
+      <!--<link rel="shortcut icon" href="http://www.theenglishauthority.com/img/favicon.png" type="image/x-icon"> -->
+      <script src="https://cdn.rawgit.com/SlexAxton/messageformat.js/v0.3.1/messageformat.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-cookies.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-sanitize.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.10.0/angular-translate.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-interpolation-messageformat/2.10.0/angular-translate-interpolation-messageformat.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-storage-cookie/2.10.0/angular-translate-storage-cookie.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-storage-local/2.10.0/angular-translate-storage-local.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-url/2.10.0/angular-translate-loader-url.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-static-files/2.10.0/angular-translate-loader-static-files.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-handler-log/2.10.0/angular-translate-handler-log.js"></script>
+      <script src="http://www.albergodiieri.com/js/app.js"></script>
   </head>
-  <body data-spy="scroll" data-target=".navbar" data-offset="80">
+  <body data-spy="scroll" data-target=".navbar" data-offset="80" ng-controller="Ctrl">
 
     <!-- TOP BAR -->
         <div id="topbar">
@@ -56,13 +70,13 @@
               <a href="#" class="dropdown-toggle" id="languageMenuTop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 <span class="glyphicon glyphicon-globe" style="font-size: 14px;"></span>&nbsp; Language</a>
                 <ul class="dropdown-menu" aria-labelledby="languageMenuTop">
-                  <li><a role="menuitem" tabindex="-1" href="#">English</a></li>
-                  <li><a role="menuitem" tabindex="-1" href="#">Italiano</a></li>
-                  <li><a role="menuitem" tabindex="-1" href="#">Espa&ntilde;ol</a></li>
+                  <li><a role="menuitem" tabindex="-1" href="#" ng-click="changeLanguage('en')">English</a></li>
+                  <li><a role="menuitem" tabindex="-1" href="#" ng-click="changeLanguage('it')">Italiano</a></li>
+                  <!-- <li><a role="menuitem" tabindex="-1" href="#">Espa&ntilde;ol</a></li>
                   <li><a role="menuitem" tabindex="-1" href="#">Fran&ccedil;ais</a></li>
                   <li><a role="menuitem" tabindex="-1" href="#">Nederlands</a></li>
                   <li><a role="menuitem" tabindex="-1" href="#">Deutsch</a></li>
-                  <li><a role="menuitem" tabindex="-1" href="#">&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
+                  <li><a role="menuitem" tabindex="-1" href="#">&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li> -->
             </div> |
             <div style="display: inline-block;">
               <a href="https://www.facebook.com/BedAndBreakfastLAlbergoDiIeri/">
@@ -92,24 +106,9 @@
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Home</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="contact.php">Contact</a></li>
-          <!--<li><div class="dropdown">
-                    <button class="btn btn-link dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-                    <span class="glyphicon glyphicon-globe" style="vertical-align:bottom"></span></button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">English</a></li>
-                      <li role="presentation" class="divider"></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Italiano</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Espa&ntilde;ol</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fran&ccedil;ais</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nederlands</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Deutsch</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
-                    </ul>
-                  </div>
-                </li> -->
+              <li><a href="#" translate="NAVBAR_Home"></a></li>
+              <li><a href="gallery.html" translate="NAVBAR_Gallery"></a></li>
+              <li><a href="contact.php" translate="NAVBAR_Contact"></a></li>
             </ul>
           </div>
         </div>
@@ -122,8 +121,8 @@
           <div class="item active">
             <div class ="slide1"></div>
             <div class="carousel-caption">
-              <h1>Welcome</h1>
-              <p>to our bed and breakfast</p>
+              <h1 translate="CAROUSEL_Welcome"></h1>
+              <p translate="CAROUSEL_to"></p>
               <!-- <p><a href="#reserve" class="btn btn-primary btn-sm booknow">Book Now</a></p> -->
             </div>
           </div>
@@ -131,31 +130,31 @@
             <div class="slide2"></div>
             <div class="carousel-caption">
             <h1>l'Albergo di Ieri</h1>
-              <p>where you can find a cozy bed,</p>
+              <p translate="CAROUSEL_where"></p>
               <!-- <p><a href="#reserve" class="btn btn-primary btn-sm booknow">Book Now</a></p> -->
             </div>
           </div>
           <div class="item">
             <div class="slide3"></div>
             <div class="carousel-caption">
-              <h1>Award-winning service</h1>
-              <p>as seen on Booking.com and AirBnB,</p>
+              <h1 translate="CAROUSEL_award"></h1>
+              <p translate="CAROUSEL_as"></p>
               <!-- <p><a href="#reserve" class="btn btn-primary btn-sm booknow">Book Now</a></p> -->
             </div>
           </div>
           <div class="item">
             <div class="slide4"></div>
             <div class="carousel-caption">
-              <h1>Beautiful landscapes</h1>
-              <p>fresh air, mountain views, tranquil scenery</p>
+              <h1 translate="CAROUSEL_beautiful"></h1>
+              <p translate="CAROUSEL_fresh"></p>
               <!-- <p><a href="#reserve" class="btn btn-primary btn-sm booknow">Book Now</a></p> -->
             </div>
           </div>
           <div class="item">
             <div class="slide5"></div>
             <div class="carousel-caption">
-              <h1>Rustic interiors</h1>
-              <p>and authentic, regional cuisine.</p>
+              <h1 translate="CAROUSEL_rustic"></h1>
+              <p translate="CAROUSEL_and"></p>
               <!-- <p><a href="#reserve" class="btn btn-primary btn-sm booknow">Book Now</a></p> -->
             </div>
           </div>
@@ -307,7 +306,7 @@
     <!-- ++++++++++++++++++++++++++++++ OUR ROOMS ++++++++++++++++++++++++++++++++++++++-->
       <div class="row titlerow">
           <div class="col-sm-5 col-xs-4"><hr></div>
-          <div class="col-sm-2 col-xs-4"><h2 class="text-center" style="color: #5e5e5e">Our Rooms</h2></div>
+          <div class="col-sm-2 col-xs-4"><h2 class="text-center" style="color: #5e5e5e" translate="OURROOMS_title"></h2></div>
           <div class="col-sm-5 col-xs-4"><hr></div>
       </div>
 
@@ -322,31 +321,31 @@
                                   <p>Camera Tagete</p>
                               </div>
                               <div class="price">
-                                  <p>60&euro;/night</p>
+                                  <p translate="OURROOMS_60night"></p>
                               </div>
                           </div>
                       </div>
                       <div class="thumb_content">
                           <div class="titleinfo">
                               <h1>Camera Tagete</h1>
-                              <p>Room with large bed and comfortable shower with separate kitchen, the perfect shelter to feel at home.</p>
+                              <p translate="OURROOMS_camtagete"></p>
                           </div>
                           <div class="infolist">
                               <div class="left">
-                                  <p><img src="img/svg/avatar.svg">&nbsp; Up to 4 Guests</p>
-                                  <p><img src="img/svg/shower.svg">&nbsp; Private Bathroom</p>
-                                  <p><img src="img/svg/real-state-parking-sign.svg">&nbsp; Free Parking</p>
+                                  <p translate="OURROOMS_upto4guests"></p>
+                                  <p translate="OURROOMS_privatebath"></p>
+                                  <p translate="OURROOMS_freeparking"></p>
                               </div>
                               <div class="right">
-                                  <p><img src="img/svg/bed.svg">&nbsp; 1 King-Sized Bed</p>
-                                  <p><img src="img/svg/sofa.svg">&nbsp; 1 Sofa Bed</p>
-                                  <p><img src="img/svg/coffee-cup.svg">&nbsp; Breakfast</p>
+                                  <p translate="OURROOMS_kingbed"></p>
+                                  <p translate="OURROOMS_sofabed"></p>
+                                  <p translate="OURROOMS_breakfast"></p>
                               </div>
                           </div>
                           <div class="booknow">
                               <a class="btn btn-primary btn-xs selectLaltraCamera" id="item1" role="button"
                               href="#registrationform" data-toggle="tooltip" data-placement="top" title="Extra Guests: &euro;10 / night after the first guest"
-                              data-placement="bottom">Select Room!</a>
+                              data-placement="bottom" translate="RESERVATION_selectroom"></a>
                           </div>
                       </div>
                   </div>
@@ -362,30 +361,30 @@
                                   <p>Camera Oleandro</p>
                               </div>
                               <div class="price">
-                                  <p>50&euro;/night</p>
+                                  <p translate="OURROOMS_50night"></p>
                               </div>
                           </div>
                       </div>
                       <div class="thumb_content">
                           <div class="titleinfo">
                               <h1>Camera Oleandro</h1>
-                              <p>Room for two people with double bed, private bathroom, and a view of the garden and mountains.</p>
+                              <p translate="OURROOMS_camoleandro"></p>
                           </div>
                           <div class="infolist">
                               <div class="left">
-                                  <p><img src="img/svg/avatar.svg">&nbsp; Up to 2 Guests</p>
-                                  <p><img src="img/svg/shower.svg">&nbsp; Private Bathroom</p>
-                                  <p><img src="img/svg/real-state-parking-sign.svg">&nbsp; Free Parking</p>
+                                  <p translate="OURROOMS_upto2guests"></p>
+                                  <p translate="OURROOMS_privatebath"></p>
+                                  <p translate="OURROOMS_freeparking"></p>
                               </div>
                               <div class="right">
-                                  <p><img src="img/svg/bed.svg">&nbsp; 1 King-Sized Bed</p>
-                                  <p><img src="img/svg/coffee-cup.svg">&nbsp; Breakfast</p>
+                                  <p translate="OURROOMS_kingbed"></p>
+                                  <p translate="OURROOMS_breakfast"></p>
                               </div>
                           </div>
                           <div class="booknow">
                               <a class="btn btn-primary btn-xs selectCameraRosa" id="item2" role="button"
                               href="#registrationform" data-toggle="tooltip" data-placement="top" title="Extra Guests: &euro;10 / night after the first guest"
-                              data-placement="bottom">Select Room!</a>
+                              data-placement="bottom" translate="RESERVATION_selectroom"></a>
                           </div>
                       </div>
                   </div>
@@ -401,30 +400,30 @@
                                   <p>Camera Gelsomino</p>
                               </div>
                               <div class="price">
-                                  <p>50&euro;/night</p>
+                                  <p translate="OURROOMS_50night"></p>
                               </div>
                           </div>
                       </div>
                       <div class="thumb_content">
                           <div class="titleinfo">
                               <h1>Camera Gelsomino</h1>
-                              <p>Room for two people with double bed, private bathroom, and a view of the garden and mountains.</p>
+                              <p translate="OURROOMS_camoleandro"></p>
                           </div>
                           <div class="infolist">
                               <div class="left">
-                                  <p><img src="img/svg/avatar.svg">&nbsp; Up to 4 Guests</p>
-                                  <p><img src="img/svg/shower.svg">&nbsp; Private Bathroom</p>
-                                  <p><img src="img/svg/real-state-parking-sign.svg">&nbsp; Free Parking</p>
+                                  <p translate="OURROOMS_upto2guests"></p>
+                                  <p translate="OURROOMS_privatebath"></p>
+                                  <p translate="OURROOMS_freeparking"></p>
                               </div>
                               <div class="right">
-                                  <p><img src="img/svg/bed.svg">&nbsp; 1 King-Sized Bed</p>
-                                  <p><img src="img/svg/coffee-cup.svg">&nbsp; Breakfast</p>
+                                  <p translate="OURROOMS_kingbed"></p>
+                                  <p translate="OURROOMS_breakfast"></p>
                               </div>
                           </div>
                           <div class="booknow">
                               <a class="btn btn-primary btn-xs selectCameraGialla" id="item3" role="button"
                               href="#registrationform" data-toggle="tooltip" data-placement="top" title="Extra Guests: &euro;10 / night after the first guest"
-                              data-placement="bottom">Select Room!</a>
+                              data-placement="bottom" translate="RESERVATION_selectroom"></a>
                           </div>
                       </div>
                   </div>
@@ -437,7 +436,7 @@
     <!-- ++++++++++++++++++++++++++++++ OUR AMENITIES ++++++++++++++++++++++++++++++++++++++-->
       <div class="row titlerow">
           <div class="col-sm-5 col-xs-4"><hr></div>
-          <div class="col-sm-2 col-xs-4"><h2 class="text-center" style="color: #5e5e5e">Amenities</h2></div>
+          <div class="col-sm-2 col-xs-4"><h2 class="text-center" style="color: #5e5e5e" translate="AMENITIES_title"></h2></div>
           <div class="col-sm-5 col-xs-4"><hr></div>
       </div>
 
@@ -457,10 +456,10 @@
                   </p>
               </div>
               <div class="amenitytitle">
-                <h5>Breakfast Included</h5>
+                <h5 translate="AMENITIES_breakfast"></h5>
               </div>
               <div class="moreinfo">
-                <p>Warm hospitality starts with breakfast. Our guests can enjoy a classic Italian breakfast enriched with delicious typical products, such as homemade jam, cakes, and ricotta.</p>
+                <p translate="AMENITIES_breakfastinfo">Warm hospitality starts with breakfast. Our guests can enjoy a classic Italian breakfast enriched with delicious typical products, such as homemade jam, cakes, and ricotta.</p>
               </div>
           </div>
           <div class="col-xs-3 amenity2">
@@ -496,10 +495,10 @@
                   </p>
               </div>
               <div class="amenitytitle">
-                <h5>Pets Allowed</h5>
+                <h5 translate="AMENITIES_pets"></h5>
               </div>
               <div class="moreinfo">
-                <p>Your dog and cat are welcome at Albergo di Ieri. We have a separate little abode for our fuzzy, four-footed friends.</p>
+                <p translate="AMENITIES_petsinfo"></p>
               </div>
           </div>
           <div class="col-xs-3 amenity3">
@@ -535,10 +534,10 @@
                   </p>
               </div>
               <div class="amenitytitle">
-                <h5>Transportation</h5>
+                <h5 translate="AMENITIES_transportation"></h5>
               </div>
               <div class="moreinfo">
-                <p>If you're close by, we can pick you up. Please mention this in the contact form. There is also free parking in front of the bed and breakfast.</p>
+                <p translate="AMENITIES_transportationinfo"></p>
               </div>
           </div>
           <div class="col-xs-3 amenity4">
@@ -590,10 +589,10 @@
                   </p>
               </div>
               <div class="amenitytitle">
-                <h5>Garden</h5>
+                <h5 translate="AMENITIES_garden"></h5>
               </div>
               <div class="moreinfo">
-                <p>The garden is the ideal place to start the day by enjoying some sun or relaxing after a day spent discovering our beautiful region.</p>
+                <p translate="AMENITIES_gardeninfo"></p>
               </div>
           </div>
       </div>
@@ -605,7 +604,7 @@
       <!--++++++++++++++++++++++++++++++++++++ Title ++++++++++++++++++++++++++++++++++++-->
           <div class="row titlerow">
               <div class="col-sm-5 col-xs-4"><hr></div>
-              <div class="col-sm-2 col-xs-4"><h2 class="text-center" style="color: #5e5e5e">Reviews</h2></div>
+              <div class="col-sm-2 col-xs-4"><h2 class="text-center" style="color: #5e5e5e" translate="REVIEWS_title"></h2></div>
               <div class="col-sm-5 col-xs-4"><hr></div>
           </div>
       <!--++++++++++++++++++++++++++++++++++++ END Title ++++++++++++++++++++++++++++++++++++-->
@@ -1313,7 +1312,7 @@
             <div class="col-sm-3">
               <p><span class="glyphicon glyphicon-earphone"></span>
                       <a href="tel:+393284833173">+39 328 4833173</a> <br>
-                      or <a href="tel:+393294193814">+39 329 4193814</a></p>
+                      <span translate="FOOTER_or"></span> <a href="tel:+393294193814">+39 329 4193814</a></p>
                     <p><span class="glyphicon glyphicon-envelope"></span>
                         <!-- ++++++++++  ENCRYPTED EMAIL ADDRESS +++++++++++-->
                           <script type="text/javascript">
@@ -1334,7 +1333,7 @@
           <div class="col-sm-3"></div>
           <!-- SOCIAL MEDIA ****** CHANGE WITH THE DIFFERENT LANGUAGES ********-->
             <div class="col-sm-6">
-              As seen on:
+              <span translate="FOOTER_asseenon"></span>
                 <a href="https://www.facebook.com/BedAndBreakfastLAlbergoDiIeri/" target="_blank"><img src="img/svg/social-media.svg" style="height: 24px;"></a>
                 <a href="https://www.airbnb.com/rooms/14165433?sug=50" target="_blank"><img src="img/svg/airbnb.svg" style="height: 24px;"></a>
                 <a href="https://www.tripadvisor.com/Hotel_Review-g887086-d3140630-Reviews-L_Albergo_di_Ieri-Serravalle_di_Chienti_Province_of_Macerata_Marche.html" target="_blank"><img src="img/svg/tripadvisor-logotype.svg" style="height: 24px;"></a>

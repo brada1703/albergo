@@ -1,3 +1,4 @@
+
 /***************** TOP BAR **********************/
   #topbar {
     height: 40px;
@@ -265,7 +266,7 @@
     }
     .titlerow h2 {
         font-family: 'Tangerine', cursive, sans-serif;
-        font-size: 2em;
+        font-size: calc(9px + 2vw);
         color: #093a58;
     }
     #roomslist {

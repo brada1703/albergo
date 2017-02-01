@@ -28,7 +28,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
   <head>
     <title>l'Albergo di Ieri</title>
       <meta charset="utf-8">
@@ -41,10 +41,24 @@
       <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
       <link rel="stylesheet" href="css/override.css">
       <script src='https://www.google.com/recaptcha/api.js'></script>
+      <!--<link rel="shortcut icon" href="http://www.theenglishauthority.com/img/favicon.png" type="image/x-icon"> -->
+      <script src="https://cdn.rawgit.com/SlexAxton/messageformat.js/v0.3.1/messageformat.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-cookies.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-sanitize.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.10.0/angular-translate.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-interpolation-messageformat/2.10.0/angular-translate-interpolation-messageformat.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-storage-cookie/2.10.0/angular-translate-storage-cookie.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-storage-local/2.10.0/angular-translate-storage-local.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-url/2.10.0/angular-translate-loader-url.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-static-files/2.10.0/angular-translate-loader-static-files.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-handler-log/2.10.0/angular-translate-handler-log.js"></script>
+      <script src="http://www.albergodiieri.com/js/app.js"></script>
   </head>
-  <body data-spy="scroll" data-target=".navbar" data-offset="80">
+  <body data-spy="scroll" data-target=".navbar" data-offset="80" ng-controller="Ctrl">
 
-    <!-- ++++++++++++++++++++++++++++++ TOP BAR +++++++++++++++++++++++++++++++++++++++++-->
+    <!-- TOP BAR -->
         <div id="topbar">
           <div class="text-left">
             <a href="tel:+393284833173">
@@ -57,13 +71,13 @@
               <a href="#" class="dropdown-toggle" id="languageMenuTop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 <span class="glyphicon glyphicon-globe" style="font-size: 14px;"></span>&nbsp; Language</a>
                 <ul class="dropdown-menu" aria-labelledby="languageMenuTop">
-                  <li><a role="menuitem" tabindex="-1" href="#">English</a></li>
-                  <li><a role="menuitem" tabindex="-1" href="#">Italiano</a></li>
-                  <li><a role="menuitem" tabindex="-1" href="#">Espa&ntilde;ol</a></li>
+                  <li><a role="menuitem" tabindex="-1" href="#" ng-click="changeLanguage('en')">English</a></li>
+                  <li><a role="menuitem" tabindex="-1" href="#" ng-click="changeLanguage('it')">Italiano</a></li>
+                  <!-- <li><a role="menuitem" tabindex="-1" href="#">Espa&ntilde;ol</a></li>
                   <li><a role="menuitem" tabindex="-1" href="#">Fran&ccedil;ais</a></li>
                   <li><a role="menuitem" tabindex="-1" href="#">Nederlands</a></li>
                   <li><a role="menuitem" tabindex="-1" href="#">Deutsch</a></li>
-                  <li><a role="menuitem" tabindex="-1" href="#">&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
+                  <li><a role="menuitem" tabindex="-1" href="#">&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li> -->
             </div> |
             <div style="display: inline-block;">
               <a href="https://www.facebook.com/BedAndBreakfastLAlbergoDiIeri/">
@@ -71,7 +85,7 @@
             </div>
           </div>
         </div>
-    <!-- ++++++++++++++++++++++++++++++ TOP BAR END +++++++++++++++++++++++++++++++++++++++++-->
+    <!--  TOP BAR END -->
     <!-- ++++++++++++++++++++++++++++++ NAVBAR  +++++++++++++++++++++++++++++++++++++++++-->
       <nav class="navbar navbar-default ontop">
         <div class="container-fluid"  data-spy="affix" data-offset-top="40">
@@ -86,24 +100,9 @@
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.php">Home</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="contact.php">Contact</a></li>
-          <!--<li><div class="dropdown">
-                    <button class="btn btn-link dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-                    <span class="glyphicon glyphicon-globe" style="vertical-align:bottom"></span></button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">English</a></li>
-                      <li role="presentation" class="divider"></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Italiano</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Espa&ntilde;ol</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fran&ccedil;ais</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nederlands</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Deutsch</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
-                    </ul>
-                  </div>
-                </li> -->
+              <li><a href="index.php" translate="NAVBAR_Home"></a></li>
+              <li><a href="gallery.html" translate="NAVBAR_Gallery"></a></li>
+              <li><a href="contact.php" translate="NAVBAR_Contact"></a></li>
             </ul>
           </div>
         </div>
@@ -122,54 +121,42 @@
     <!-- ++++++++++++++++++++++++++++++ WHERE ARE WE ++++++++++++++++++++++++++++++++++++++-->
     <div class="row titlerow">
         <div class="col-sm-5 col-xs-4"><hr></div>
-        <div class="col-sm-2 col-xs-4"><h2 class="text-center" style="color: #5e5e5e">Where are we?</h2></div>
+        <div class="col-sm-2 col-xs-4">
+          <h2 class="text-center" style="color: #5e5e5e" translate="CONTACT_where"></h2>
+        </div>
         <div class="col-sm-5 col-xs-4"><hr></div>
     </div>
     <div class="contactus">
-      <p>
-        Located in the Appenine mountains in the heart of Italy surrounded by fresh, clean air and immaculate nature perfect for discovering the beauty of central Italy, as well as cycling, hiking, skiing or simply resting.
-      </p>
-      <h3>From the Air</h3>
+      <p translate="CONTACT_located"></p>
+      <h3 translate="CONTACT_fromtheair"></h3>
       <div style="padding-left: 10px;">
-        <h4>From Rome - airport: approximately 4 hours</h4>
+        <h4 translate="CONTACT_fromRome"></h4>
           <ul>
-            <li>
-              Take a train or bus from the Fiumicino or Ciampino airport to Termini train station.
-            </li>
-            <li>
-              Take a <a href="http://www.trenitalia.com/tcom-en">train</a> from the Termini train station in Rome to Foligno station. This will take around 1 hour and 45 minutes and cost 10€.
-            </li>
-            <li>
-              Take a <a href="http://www.contrammobilita.it/index.php/orari-e-itinerari-contram/">bus</a> from Foligno to Serravalle. This will take about 45 minutes
-            </li>
+            <li translate="CONTACT_fromRomeair"></li>
+            <li translate="CONTACT_fromRometrain"></li>
+            <li translate="CONTACT_fromRomebus"></li>
           </ul>
-        <h4>From Perugia - airport: approximately 3 hours</h4>
+        <h4 translate="CONTACT_fromPerugia"></h4>
           <ul>
-            <li>Take the bus E422 from the San Francesco d'Assisi airport in Perugia to the train station</li>
-            <li>Take the train from Perugia to Foligno. This should take about 30 minutes and cost 4€.</li>
-            <li>Take a <a href="http://www.contrammobilita.it/index.php/orari-e-itinerari-contram/">bus</a> from Foligno to Serravalle. This will take about 45 minutes</li>
+            <li translate="CONTACT_fromPerugiabus"></li>
+            <li translate="CONTACT_fromPerugiatrain"></li>
+            <li translate="CONTACT_fromPerugiaFoligno"></li>
           </ul>
-        <h4>From Ancona airport: approximately 3 hours</h4>
+        <h4 translate="CONTACT_fromAncona"></h4>
           <ul>
-            <li>Land in <a href="http://aeroportomarche.regione.marche.it/" target="_blank">Aeroporto delle Marche</a> with flights from Tirana, Rome - Fiumicino, and Munich</li>
-            <li>Take the <a href="http://www.trenitalia.com/tcom-en">train</a> from Castelferretti to Foligno - takes about 2 hours and costs about 8,50€</li>
-            <li>We would be happy to pick you up in Foligno. Please give us some advance notice. We'll try to accomodate you as best as we can.</li>
+            <li translate="CONTACT_fromAnconaland"></li>
+            <li translate="CONTACT_fromAnconatrain"></li>
+            <li translate="CONTACT_fromAnconapickup"></li>
           </ul>
       </div>
-      <h3>Trains and Busses</h3>
+      <h3 translate="CONTACT_trainsandbusses"></h3>
       <div style="padding-left: 10px;">
-        <h4>Trainstations</h4>
-          <p>
-            The closest train stations are Foligno, Tolentino, Gualdo Tadino, and Nocera Umbra.
-          </p>
-        <h4>Busses</h4>
-          <p>
-            There are busses from the train stations listed above. Please review their <a href="http://www.contrammobilita.it/index.php/orari-e-itinerari-contram/">hours and availability</a>.
-          </p>
-        <h4>Private transport</h4>
-          <p>
-            For other options and private transport, please contact us below.
-          </p>
+        <h4 translate="CONTACT_trainstations"></h4>
+          <p translate="CONTACT_closesttrain"></p>
+        <h4 translate="CONTACT_bussesTitle"></h4>
+          <p translate="CONTACT_bussesInfo"></p>
+        <h4 translate="CONTACT_private"></h4>
+          <p translate="CONTACT_otheroptions"></p>
       </div>
     </div>
     <!-- ++++++++++++++++++++++++++++++ WHERE ARE WE END ++++++++++++++++++++++++++++++++++++++-->
@@ -177,7 +164,9 @@
     <!-- ++++++++++++++++++++++++++++++ CONTACT FORM ++++++++++++++++++++++++++++++++++++++-->
       <div class="row titlerow">
           <div class="col-sm-5 col-xs-4"><hr></div>
-          <div class="col-sm-2 col-xs-4"><h2 class="text-center" style="color: #5e5e5e">Contact Us</h2></div>
+          <div class="col-sm-2 col-xs-4">
+            <h2 class="text-center" style="color: #5e5e5e" translate="CONTACT_contactus"></h2>
+          </div>
           <div class="col-sm-5 col-xs-4"><hr></div>
       </div>
 
@@ -190,19 +179,19 @@
                     <div class="row">
                       <div class="col-md-10 col-md-offset-1">
                           <?php echo $result; ?>
-                          <p>Please send us a message. We would be happy to accomodate you.</p>
+                          <p translate="CONTACT_sendusmessage"></p>
                               <form method="post">
                                 <div class="form-group">
-                                  <input type="text" name="name" class="form-control" placeholder="Your name" value="<?php echo $_POST['name']; ?>" required>
+                                  <input type="text" name="name" class="form-control" translate translate-attr-placeholder="CONTACT_name" translate-value-browser="{{app.browser}}" value="<?php echo $_POST['name']; ?>" required>
                                 </div>
                                 <div class="form-group">
-                                  <input type="email" name="email" class="form-control" placeholder="Your email" value="<?php echo $_POST['email']; ?>" required>
+                                  <input type="email" name="email" class="form-control" translate translate-attr-placeholder="RESERVATION_emailaddress" translate-value-browser="{{app.browser}}" value="<?php echo $_POST['email']; ?>" required>
                                 </div>
                                 <div class="form-group">
-                                  <input type="tel" name="phone" class="form-control" placeholder="Your phone number. Please include country code." value="<?php echo $_POST['phone']; ?>" required>
+                                  <input type="tel" name="phone" class="form-control" translate translate-attr-placeholder="CONTACT_phonenumber" translate-value-browser="{{app.browser}}" value="<?php echo $_POST['phone']; ?>" required>
                                 </div>
                                 <div class="form-group">
-                                  <label class="notbold" for="sel1">Number of Guests:</label>
+                                  <label class="notbold" for="sel1" translate="CONTACT_numguests"></label>
                                   <select class="form-control" id="sel1" name="guests" value="<?php echo $_POST['guests']; ?>">
                                     <option>1</option>
                                     <option>2</option>
@@ -211,9 +200,9 @@
                                   </select>
                                 </div>
                                 <div class="form-group">
-                                    <label class="notbold">Which room would you like to book?</label>
+                                    <label class="notbold" translate="CONTACT_whichroom"></label>
                                       <select class="form-control" id="sel2" name="room" value="<?php echo $_POST['room']; ?>">
-                                        <option disabled="disabled" selected="selected">Select Room</option>
+                                        <option disabled="disabled" selected="selected" translate="CONTACT_selectroom"></option>
                                         <optgroup label="Up to 4 Guests">
                                           <option value="L'altra Camera">Camera Tagete</option>
                                         </optgroup>
@@ -231,14 +220,14 @@
                                       <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
                                     </div>
                                     <input type="text" class="input-sm form-control" name="start" placeholder="Check-in" />
-                                    <span class="input-group-addon">to</span>
+                                    <span class="input-group-addon" translate="RESERVATION_to"></span>
                                     <input type="text" class="input-sm form-control" name="end" placeholder="Check-out" />
                                     <div class="input-group-addon">
                                       <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                  <textarea name="message" rows="5" class="form-control" placeholder="Please tell us more about your trip. For example, at what time do you plan on arriving? Do you have any special needs? Thanks!" required><?php echo $_POST['message']; ?></textarea>
+                                  <textarea name="message" rows="5" class="form-control"  translate translate-attr-placeholder="CONTACT_pleasetellus" translate-value-browser="{{app.browser}}" required><?php echo $_POST['message']; ?></textarea>
                                 </div>
                                 <center><div class="g-recaptcha" data-sitekey="6Ld6IBMUAAAAAGD9SMU-p-zfZQDPSqdp_6Hmm48q"></div></center>
                                 <br>
@@ -254,9 +243,9 @@
           </div>
         </div>
     <!-- ++++++++++++++++++++++++++++++ CONTACT FORM END ++++++++++++++++++++++++++++++++++++++-->
-
+<br><br>
     <!-- ++++++++++++++++++++++++++++++++++++++  FOOTER  +++++++++++++++++++++++++++++++++-->
-      <div class="footer" style="margin-top: 20px;">
+      <div class="footer">
         <div class="row footertext">
           <div class="col-sm-3"></div>
           <!-- ADDRESS -->
@@ -270,7 +259,7 @@
             <div class="col-sm-3">
               <p><span class="glyphicon glyphicon-earphone"></span>
                       <a href="tel:+393284833173">+39 328 4833173</a> <br>
-                      or <a href="tel:+393294193814">+39 329 4193814</a></p>
+                      <span translate="FOOTER_or"></span> <a href="tel:+393294193814">+39 329 4193814</a></p>
                     <p><span class="glyphicon glyphicon-envelope"></span>
                         <!-- ++++++++++  ENCRYPTED EMAIL ADDRESS +++++++++++-->
                           <script type="text/javascript">
@@ -291,7 +280,7 @@
           <div class="col-sm-3"></div>
           <!-- SOCIAL MEDIA ****** CHANGE WITH THE DIFFERENT LANGUAGES ********-->
             <div class="col-sm-6">
-              As seen on:
+              <span translate="FOOTER_asseenon"></span>
                 <a href="https://www.facebook.com/BedAndBreakfastLAlbergoDiIeri/" target="_blank"><img src="img/svg/social-media.svg" style="height: 24px;"></a>
                 <a href="https://www.airbnb.com/rooms/14165433?sug=50" target="_blank"><img src="img/svg/airbnb.svg" style="height: 24px;"></a>
                 <a href="https://www.tripadvisor.com/Hotel_Review-g887086-d3140630-Reviews-L_Albergo_di_Ieri-Serravalle_di_Chienti_Province_of_Macerata_Marche.html" target="_blank"><img src="img/svg/tripadvisor-logotype.svg" style="height: 24px;"></a>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
   <head>
     <title>l'Albergo di Ieri</title>
       <meta charset="utf-8">
@@ -12,8 +12,22 @@
       <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
       <link rel="stylesheet" href="css/override.css">
       <script src='https://www.google.com/recaptcha/api.js'></script>
+      <!--<link rel="shortcut icon" href="http://www.theenglishauthority.com/img/favicon.png" type="image/x-icon"> -->
+      <script src="https://cdn.rawgit.com/SlexAxton/messageformat.js/v0.3.1/messageformat.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-cookies.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-sanitize.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.10.0/angular-translate.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-interpolation-messageformat/2.10.0/angular-translate-interpolation-messageformat.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-storage-cookie/2.10.0/angular-translate-storage-cookie.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-storage-local/2.10.0/angular-translate-storage-local.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-url/2.10.0/angular-translate-loader-url.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-static-files/2.10.0/angular-translate-loader-static-files.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-handler-log/2.10.0/angular-translate-handler-log.js"></script>
+      <script src="http://www.albergodiieri.com/js/app.js"></script>
   </head>
-  <body data-spy="scroll" data-target=".navbar" data-offset="80">
+  <body data-spy="scroll" data-target=".navbar" data-offset="80" ng-controller="Ctrl">
 
     <!-- TOP BAR -->
         <div id="topbar">
@@ -28,13 +42,13 @@
               <a href="#" class="dropdown-toggle" id="languageMenuTop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 <span class="glyphicon glyphicon-globe" style="font-size: 14px;"></span>&nbsp; Language</a>
                 <ul class="dropdown-menu" aria-labelledby="languageMenuTop">
-                  <li><a role="menuitem" tabindex="-1" href="#">English</a></li>
-                  <li><a role="menuitem" tabindex="-1" href="#">Italiano</a></li>
-                  <li><a role="menuitem" tabindex="-1" href="#">Espa&ntilde;ol</a></li>
+                  <li><a role="menuitem" tabindex="-1" href="#" ng-click="changeLanguage('en')">English</a></li>
+                  <li><a role="menuitem" tabindex="-1" href="#" ng-click="changeLanguage('it')">Italiano</a></li>
+                  <!-- <li><a role="menuitem" tabindex="-1" href="#">Espa&ntilde;ol</a></li>
                   <li><a role="menuitem" tabindex="-1" href="#">Fran&ccedil;ais</a></li>
                   <li><a role="menuitem" tabindex="-1" href="#">Nederlands</a></li>
                   <li><a role="menuitem" tabindex="-1" href="#">Deutsch</a></li>
-                  <li><a role="menuitem" tabindex="-1" href="#">&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
+                  <li><a role="menuitem" tabindex="-1" href="#">&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li> -->
             </div> |
             <div style="display: inline-block;">
               <a href="https://www.facebook.com/BedAndBreakfastLAlbergoDiIeri/">
@@ -57,24 +71,9 @@
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.php">Home</a></li>
-              <li><a href="#">Gallery</a></li>
-              <li><a href="contact.php">Contact</a></li>
-          <!--<li><div class="dropdown">
-                    <button class="btn btn-link dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-                    <span class="glyphicon glyphicon-globe" style="vertical-align:bottom"></span></button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">English</a></li>
-                      <li role="presentation" class="divider"></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Italiano</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Espa&ntilde;ol</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fran&ccedil;ais</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nederlands</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Deutsch</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">&#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
-                    </ul>
-                  </div>
-                </li> -->
+              <li><a href="index.php" translate="NAVBAR_Home"></a></li>
+              <li><a href="gallery.html" translate="NAVBAR_Gallery"></a></li>
+              <li><a href="contact.php" translate="NAVBAR_Contact"></a></li>
             </ul>
           </div>
         </div>
@@ -92,73 +91,73 @@
         <div id="myCarouselProperty" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
               <div class="item active">
-                <img src="img/property/building01.JPG" alt="Chania">
+                <img src="img/property/building01.jpg" alt="Chania">
                 <div class="carousel-caption">
                   <h3>Albergo di Ieri</h3>
-                  <p>Facade</p>
+                  <p translate="GALLERY_property_facade"></p>
                 </div>
               </div>
               <div class="item">
-                <img src="img/property/decoration03.JPG" alt="Chania">
+                <img src="img/property/decoration03.jpg" alt="Chania">
                 <div class="carousel-caption">
                   <h3>Albergo di Ieri</h3>
-                  <p>Roses at the door</p>
+                  <p translate="GALLERY_property_roses"></p>
                 </div>
               </div>
               <div class="item">
-                <img src="img/property/hallway05.JPG" alt="Flower">
+                <img src="img/property/hallway05.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Albergo di Ieri</h3>
-                  <p>Entrance and corridor</p>
+                  <p translate="GALLERY_property_entrance"></p>
                 </div>
               </div>
               <div class="item">
-                <img src="img/property/kitchen02.JPG" alt="Flower">
+                <img src="img/property/kitchen02.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Albergo di Ieri</h3>
-                  <p>Breakfast room</p>
+                  <p translate="GALLERY_property_breakfast"></p>
                 </div>
               </div>
               <div class="item">
-                <img src="img/property/flowers01.JPG" alt="Flower">
+                <img src="img/property/flowers01.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Albergo di Ieri</h3>
-                  <p>Facade and Flowers</p>
+                  <p translate="GALLERY_property_facadeandflowers"></p>
                 </div>
               </div>
               <div class="item">
-                <img src="img/property/backyard02.JPG" alt="Flower">
+                <img src="img/property/backyard02.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Albergo di Ieri</h3>
-                  <p>Garden</p>
+                  <p translate="GALLERY_property_garden"></p>
                 </div>
               </div>
               <div class="item">
-                <img src="img/property/landscape02.JPG" alt="Flower">
+                <img src="img/property/landscape02.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Albergo di Ieri</h3>
-                  <p>Landscape</p>
+                  <p translate="GALLERY_property_landscape"></p>
                 </div>
               </div>
               <div class="item">
-                <img src="img/property/landscape03.JPG" alt="Flower">
+                <img src="img/property/landscape03.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Albergo di Ieri</h3>
                   <p>Castelluccio di Norcia</p>
                 </div>
               </div>
               <div class="item">
-                <img src="img/property/landscape05.JPG" alt="Flower">
+                <img src="img/property/landscape05.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Albergo di Ieri</h3>
-                  <p>Landscape</p>
+                  <p translate="GALLERY_property_landscape"></p>
                 </div>
               </div>
               <div class="item">
-                <img src="img/property/decoration01.JPG" alt="Flower">
+                <img src="img/property/decoration01.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Albergo di Ieri</h3>
-                  <p>Reviews from Booking</p>
+                  <p translate="GALLERY_property_reviews"></p>
                 </div>
               </div>
             </div>
@@ -182,73 +181,73 @@
         <div id="myCarouselLaltraCamera" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner" role="listbox">
               <div class="item active">
-                <img src="img/laltracamera/01.JPG" alt="Chania">
+                <img src="img/laltracamera/01.jpg" alt="Chania">
                 <div class="carousel-caption">
                   <h3>Camera Tagete</h3>
-                  <p>Double bed</p>
+                  <p translate="GALLERY_camtagete_doublebed"></p>
                 </div>
               </div>
               <div class="item">
-                <img src="img/laltracamera/02.JPG" alt="Chania">
+                <img src="img/laltracamera/02.jpg" alt="Chania">
                 <div class="carousel-caption">
                   <h3>Camera Tagete</h3>
-                  <p>Beautiful Decoration</p>
+                  <p translate="GALLERY_camtagete_decoration"></p>
                 </div>
               </div>
               <div class="item turnaround">
-                <img src="img/laltracamera/03.JPG" alt="Flower">
+                <img src="img/laltracamera/03.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Camera Tagete</h3>
-                  <p>Double bed</p>
+                  <p translate="GALLERY_camtagete_doublebed"></p>
                 </div>
               </div>
               <div class="item">
-                <img src="img/laltracamera/04.JPG" alt="Flower">
+                <img src="img/laltracamera/04.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Camera Tagete</h3>
-                  <p>Curtains</p>
+                  <p translate="GALLERY_camtagete_curtains"></p>
                 </div>
               </div>
               <div class="item">
-                <img src="img/laltracamera/05.JPG" alt="Flower">
+                <img src="img/laltracamera/05.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Camera Tagete</h3>
-                  <p>Double Bed</p>
+                  <p translate="GALLERY_camtagete_doublebed"></p>
                 </div>
               </div>
               <div class="item">
-                <img src="img/laltracamera/06.JPG" alt="Flower">
+                <img src="img/laltracamera/06.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Camera Tagete</h3>
-                  <p>Washroom</p>
+                  <p translate="GALLERY_camtagete_washroom"></p>
                 </div>
               </div>
               <div class="item turnaround">
-                <img src="img/laltracamera/07.JPG" alt="Flower">
+                <img src="img/laltracamera/07.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Camera Tagete</h3>
-                  <p>Washroom</p>
+                  <p translate="GALLERY_camtagete_washroom"></p>
                 </div>
               </div>
               <div class="item turnaround">
-                <img src="img/laltracamera/08.JPG" alt="Flower">
+                <img src="img/laltracamera/08.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Camera Tagete</h3>
-                  <p>Washroom</p>
+                  <p translate="GALLERY_camtagete_washroom"></p>
                 </div>
               </div>
               <div class="item">
-                <img src="img/laltracamera/09.JPG" alt="Flower">
+                <img src="img/laltracamera/09.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Camera Tagete</h3>
-                  <p>Pillow</p>
+                  <p translate="GALLERY_camtagete_pillow"></p>
                 </div>
               </div>
               <div class="item">
-                <img src="img/laltracamera/10.JPG" alt="Flower">
+                <img src="img/laltracamera/10.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Camera Tagete</h3>
-                  <p>Entance and sofa bed</p>
+                  <p translate="GALLERY_camtagete_entrance"></p>
                 </div>
               </div>
           </div>
@@ -272,34 +271,34 @@
         <div id="myCarouselCameraRosa" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
               <div class="item active">
-                <img src="img/camerarosa/11bed-left.JPG" alt="Chania">
+                <img src="img/camerarosa/11bed-left.jpg" alt="Chania">
                 <div class="carousel-caption">
                   <h3>Camera Oleandro</h3>
-                  <p>Double bed</p>
+                  <p translate="GALLERY_camoleandro_doublebed"></p>
                 </div>
               </div>
 
               <div class="item">
-                <img src="img/camerarosa/12bed-right.JPG" alt="Chania">
+                <img src="img/camerarosa/12bed-right.jpg" alt="Chania">
                 <div class="carousel-caption">
                   <h3>Camera Oleandro</h3>
-                  <p>Double bed</p>
+                  <p translate="GALLERY_camoleandro_doublebed"></p>
                 </div>
               </div>
 
               <div class="item">
-                <img src="img/camerarosa/13bed.JPG" alt="Flower">
+                <img src="img/camerarosa/13bed.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Camera Oleandro</h3>
-                  <p>Double bed</p>
+                  <p translate="GALLERY_camoleandro_doublebed"></p>
                 </div>
               </div>
 
               <div class="item">
-                <img src="img/camerarosa/14flowers.JPG" alt="Flower">
+                <img src="img/camerarosa/14flowers.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Camera Oleandro</h3>
-                  <p>Flowers</p>
+                  <p translate="GALLERY_camoleandro_flowers"></p>
                 </div>
               </div>
 
@@ -307,23 +306,23 @@
                 <img src="img/camerarosa/15chair-vertical.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Camera Oleandro</h3>
-                  <p>Chairs in the room</p>
+                  <p translate="GALLERY_camoleandro_chairs"></p>
                 </div>
               </div>
 
               <div class="item turnaround">
-                <img src="img/camerarosa/16bathroom-vertical.JPG" alt="Flower">
+                <img src="img/camerarosa/16bathroom-vertical.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Camera Oleandro</h3>
-                  <p>Washroom</p>
+                  <p translate="GALLERY_camoleandro_washroom"></p>
                 </div>
               </div>
 
               <div class="item turnaround">
-                <img src="img/camerarosa/17mirror-vertical.JPG" alt="Flower">
+                <img src="img/camerarosa/17mirror-vertical.jpg" alt="Flower">
                 <div class="carousel-caption">
                   <h3>Camera Oleandro</h3>
-                  <p>Washroom</p>
+                  <p translate="GALLERY_camoleandro_washroom"></p>
                 </div>
               </div>
             </div>
@@ -347,42 +346,42 @@
         <div id="carouselCameraGialla" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                  <img src="img/cameragialla/01keys.JPG" alt="Chania">
+                  <img src="img/cameragialla/01keys.jpg" alt="Chania">
                   <div class="carousel-caption">
                     <h3>Camera Gelsomino</h3>
-                    <p>Keys</p>
+                    <p translate="GALLERY_camgelsomino_keys"></p>
                   </div>
                 </div>
 
                 <div class="item">
-                  <img src="img/cameragialla/02bed.JPG" alt="Chania">
+                  <img src="img/cameragialla/02bed.jpg" alt="Chania">
                   <div class="carousel-caption">
                     <h3>Camera Gelsomino</h3>
-                    <p>Flowers</p>
+                    <p translate="GALLERY_camgelsomino_flowers"></p>
                   </div>
                 </div>
 
                 <div class="item">
-                  <img src="img/cameragialla/03bedsidetable.JPG" alt="Flower">
+                  <img src="img/cameragialla/03bedsidetable.jpg" alt="Flower">
                   <div class="carousel-caption">
                     <h3>Camera Gelsomino</h3>
-                    <p>Drawers</p>
+                    <p translate="GALLERY_camgelsomino_drawers"></p>
                   </div>
                 </div>
 
                 <div class="item">
-                  <img src="img/cameragialla/04desk.JPG" alt="Flower">
+                  <img src="img/cameragialla/04desk.jpg" alt="Flower">
                   <div class="carousel-caption">
                     <h3>Camera Gelsomino</h3>
-                    <p>Drawers</p>
+                    <p translate="GALLERY_camgelsomino_drawers"></p>
                   </div>
                 </div>
 
                 <div class="item">
-                  <img src="img/cameragialla/05table.JPG" alt="Flower">
+                  <img src="img/cameragialla/05table.jpg" alt="Flower">
                   <div class="carousel-caption">
                     <h3>Camera Gelsomino</h3>
-                    <p>Glasses</p>
+                    <p translate="GALLERY_camgelsomino_glasses"></p>
                   </div>
                 </div>
 
@@ -390,7 +389,7 @@
                   <img src="img/cameragialla/06bathroom.jpg" alt="Flower">
                   <div class="carousel-caption">
                     <h3>Camera Gelsomino</h3>
-                    <p>Washroom</p>
+                    <p translate="GALLERY_camgelsomino_washroom"></p>
                   </div>
                 </div>
             </div>
@@ -407,7 +406,7 @@
     <!-- ++++++++++++++++++++++++++++++ IMAGE CAROUSELS END ++++++++++++++++++++++++++++++++++++++-->
 
     <!-- ++++++++++++++++++++++++++++++++++++++  FOOTER  +++++++++++++++++++++++++++++++++-->
-      <div class="footer" style="margin-top: 20px;">
+      <div class="footer">
         <div class="row footertext">
           <div class="col-sm-3"></div>
           <!-- ADDRESS -->
@@ -421,7 +420,7 @@
             <div class="col-sm-3">
               <p><span class="glyphicon glyphicon-earphone"></span>
                       <a href="tel:+393284833173">+39 328 4833173</a> <br>
-                      or <a href="tel:+393294193814">+39 329 4193814</a></p>
+                      <span translate="FOOTER_or"></span> <a href="tel:+393294193814">+39 329 4193814</a></p>
                     <p><span class="glyphicon glyphicon-envelope"></span>
                         <!-- ++++++++++  ENCRYPTED EMAIL ADDRESS +++++++++++-->
                           <script type="text/javascript">
@@ -442,7 +441,7 @@
           <div class="col-sm-3"></div>
           <!-- SOCIAL MEDIA ****** CHANGE WITH THE DIFFERENT LANGUAGES ********-->
             <div class="col-sm-6">
-              As seen on:
+              <span translate="FOOTER_asseenon"></span>
                 <a href="https://www.facebook.com/BedAndBreakfastLAlbergoDiIeri/" target="_blank"><img src="img/svg/social-media.svg" style="height: 24px;"></a>
                 <a href="https://www.airbnb.com/rooms/14165433?sug=50" target="_blank"><img src="img/svg/airbnb.svg" style="height: 24px;"></a>
                 <a href="https://www.tripadvisor.com/Hotel_Review-g887086-d3140630-Reviews-L_Albergo_di_Ieri-Serravalle_di_Chienti_Province_of_Macerata_Marche.html" target="_blank"><img src="img/svg/tripadvisor-logotype.svg" style="height: 24px;"></a>
