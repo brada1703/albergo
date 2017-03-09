@@ -99,8 +99,24 @@
   }
 /***************** HEADER NAVIGATION BAR END ******************/
 /***************** MAIN CAROUSEL ******************************/
-  #theCarousel {
-    width: 100%;
+
+  .mainimagecarousel {
+    height: 480px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-width: 100%;
+    max-width: none;
+  }
+
+  #maincarouseltitle {
+    font-size: calc(15px + 4vw);
+    font-family: 'Pacifico', cursive;
+    padding-bottom: .4em;
+  }
+  #maincarouselsubtext {
+    font-size: calc(10px + 1.7vw);
+    margin-bottom: 120px;
   }
 
   #websiteTitle{
@@ -114,35 +130,35 @@
     font-size: 5.4em;
   }
   #theCarousel .slide1{
-    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('../img/01.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('http://www.albergodiieri.com/img/01.jpg');
     height: 480px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   #theCarousel .slide2{
-    background-image: url('../img/02.jpg');
+    background-image: url('http://www.albergodiieri.com/img/02.jpg');
     height: 480px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   #theCarousel .slide3{
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/03.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('http://www.albergodiieri.com/img/03.jpg');
     height: 480px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   #theCarousel .slide4{
-    background-image: url('../img/04.jpg');
+    background-image: url('http://www.albergodiieri.com/img/04.jpg');
     height: 480px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   #theCarousel .slide5{
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/05.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('http://www.albergodiieri.com/img/05.jpg');
     height: 480px;
     background-repeat: no-repeat;
     background-position: center;
@@ -154,12 +170,9 @@
     padding-bottom: .4em;
   }
   #theCarousel .carousel-caption p{
-    font-size: calc(10px + 2vw);
+    font-size: calc(10px + 1.8vw);
     margin-bottom: 120px;
   }
-  /*  #theCarousel .booknow {
-      margin-top: 50px;
-    }*/
 
   #theCarousel .carousel-control.left, .carousel-control.right {
       background-image: none
@@ -517,7 +530,7 @@
   }
 
   #datepicker {
-    z-index: 0;
+    z-index: 1;
   }
 
   .center {
@@ -674,6 +687,9 @@
   }
   .imagecarousels .carousel-caption {
     padding-bottom: 25px !important;
+  }
+  .carousel-indicators {
+    display:none;
   }
 /***************** GALLERY END *********************************/
 /***************** CONTACT *********************************/

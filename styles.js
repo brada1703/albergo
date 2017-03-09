@@ -7,7 +7,7 @@ $(function () {
 
             $.ajax({
                 type: "POST",
-                url: url,
+                url: 'sendemail.php',
                 data: $(this).serialize(),
                 success: function (data)
                 {
@@ -31,10 +31,6 @@ $(function () {
          pause: false
      });
 /************************** HERO BAR CAROUSEL *************************/
-/************************** DATE PICKER *******************************/
-    $('.input-daterange').datepicker({
-    });
-/************************** DATE PICKER *******************************/
 /************************** ROOM MODALS - L'altra Camera **************/
     $(".openModalClassicDoubleRoom").click(function(){
         $("#myModal").modal();

@@ -3,6 +3,7 @@
     "NAVBAR_Gallery": "Galleria",
     "NAVBAR_Contact": "Contatti",
 
+    "CAROUSEL_Albergo": "Albergo di Ieri",
     "CAROUSEL_Welcome": "Benvenuti",
     "CAROUSEL_to": "nel nostro bed and breakfast",
     "CAROUSEL_where": "dove troverai un letto confortevole",
@@ -32,15 +33,15 @@
     "OURROOMS_title": "Le Nostre Stanze",
     "OURROOMS_60night": "60&euro; a notte",
     "OURROOMS_camtagete": "Camera con letto grande e comoda doccia con cucina separata, il rifugio perfetto per sentirsi a casa.",
-    "OURROOMS_upto4guests": "<img src='img/svg/avatar.svg'>&nbsp; Fino a 4 Ospiti",
-    "OURROOMS_privatebath": "<img src='img/svg/shower.svg'>&nbsp; Bagno in Camera",
-    "OURROOMS_freeparking": "<img src='img/svg/real-state-parking-sign.svg'>&nbsp; Parcheggio gratuito",
-    "OURROOMS_kingbed": "<img src='img/svg/bed.svg'>&nbsp; 1 Letto matrimoniale",
-    "OURROOMS_sofabed": "<img src='img/svg/sofa.svg'>&nbsp; 1 Divano letto",
-    "OURROOMS_breakfast": "<img src='img/svg/coffee-cup.svg'>&nbsp; Colazione",
+    "OURROOMS_upto4guests": "<img src='http://www.albergodiieri.com/img/svg/avatar.svg'>&nbsp; Fino a 4 Ospiti",
+    "OURROOMS_privatebath": "<img src='http://www.albergodiieri.com/img/svg/shower.svg'>&nbsp; Bagno in Camera",
+    "OURROOMS_freeparking": "<img src='http://www.albergodiieri.com/img/svg/real-state-parking-sign.svg'>&nbsp; Parcheggio gratuito",
+    "OURROOMS_kingbed": "<img src='http://www.albergodiieri.com/img/svg/bed.svg'>&nbsp; 1 Letto matrimoniale",
+    "OURROOMS_sofabed": "<img src='http://www.albergodiieri.com/img/svg/sofa.svg'>&nbsp; 1 Divano letto",
+    "OURROOMS_breakfast": "<img src='http://www.albergodiieri.com/img/svg/coffee-cup.svg'>&nbsp; Colazione",
     "OURROOMS_50night": "50&euro; a nottte",
     "OURROOMS_camoleandro": "Camera per due persone con letto matrimoniale, bagno privato e vista sul giardino e sulle montagne.",
-    "OURROOMS_upto2guests": "<img src='img/svg/avatar.svg'>&nbsp; Fino a 2 Ospiti",
+    "OURROOMS_upto2guests": "<img src='http://www.albergodiieri.com/img/svg/avatar.svg'>&nbsp; Fino a 2 Ospiti",
 
     "AMENITIES_title": "Servizi",
     "AMENITIES_breakfast": "Colazione inclusa",
@@ -114,5 +115,6 @@
     "CONTACT_numguests": "Numero ospiti:",
     "CONTACT_selectroom": "Selezionare stanza",
     "CONTACT_pleasetellus": "Sapresti dirci qualcosa di più sul viaggio? Ad esempio, a che ora pensi di arrivare? Hai esigenze particolari? Grazie mille!",
-    "CONTACT_submit": "Invia"
+    "CONTACT_submit": "Invia",
+    "CONTACT_guests": "Ospiti"
 }

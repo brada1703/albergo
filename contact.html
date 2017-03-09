@@ -1,0 +1,135 @@
+<!-- ++++++++++++++++++++++++++++++ GOOGLE MAP ++++++++++++++++++++++++++++++++++++++-->
+    <div class="row titlerow">
+      <div class="col-sm-5 col-xs-4"><hr></div>
+      <div class="col-sm-2 col-xs-4"><h2 class="text-center" style="color: #5e5e5e">Google Maps</h2></div>
+      <div class="col-sm-5 col-xs-4"><hr></div>
+    </div>
+    <div class="googlemap">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d738459.7306103226!2d12.64948400331963!3d43.067546735327284!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf57476262fbf86e2!2sL&#39;Albergo+di+Ieri!5e0!3m2!1sen!2sus!4v1485597272179" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen></iframe>
+    </div>
+<!-- ++++++++++++++++++++++++++++++ GOOGLE MAP END ++++++++++++++++++++++++++++++++++++++-->
+<!-- ++++++++++++++++++++++++++++++ WHERE ARE WE ++++++++++++++++++++++++++++++++++++++-->
+    <div class="row titlerow">
+        <div class="col-sm-5 col-xs-4"><hr></div>
+        <div class="col-sm-2 col-xs-4">
+          <h2 class="text-center" style="color: #5e5e5e" translate="CONTACT_where"></h2>
+        </div>
+        <div class="col-sm-5 col-xs-4"><hr></div>
+    </div>
+    <div class="contactus">
+        <p translate="CONTACT_located"></p>
+        <h3 translate="CONTACT_fromtheair"></h3>
+        <div style="padding-left: 10px;">
+            <h4 translate="CONTACT_fromRome"></h4>
+              <ul>
+                <li translate="CONTACT_fromRomeair"></li>
+                <li translate="CONTACT_fromRometrain"></li>
+                <li translate="CONTACT_fromRomebus"></li>
+              </ul>
+            <h4 translate="CONTACT_fromPerugia"></h4>
+              <ul>
+                <li translate="CONTACT_fromPerugiabus"></li>
+                <li translate="CONTACT_fromPerugiatrain"></li>
+                <li translate="CONTACT_fromPerugiaFoligno"></li>
+              </ul>
+            <h4 translate="CONTACT_fromAncona"></h4>
+              <ul>
+                <li translate="CONTACT_fromAnconaland"></li>
+                <li translate="CONTACT_fromAnconatrain"></li>
+                <li translate="CONTACT_fromAnconapickup"></li>
+              </ul>
+        </div>
+        <h3 translate="CONTACT_trainsandbusses"></h3>
+        <div style="padding-left: 10px;">
+            <h4 translate="CONTACT_trainstations"></h4>
+            <p translate="CONTACT_closesttrain"></p>
+            <h4 translate="CONTACT_bussesTitle"></h4>
+            <p translate="CONTACT_bussesInfo"></p>
+            <h4 translate="CONTACT_private"></h4>
+            <p translate="CONTACT_otheroptions"></p>
+        </div>
+    </div>
+<!-- ++++++++++++++++++++++++++++++ WHERE ARE WE END ++++++++++++++++++++++++++++++++++++++-->
+<!-- ++++++++++++++++++++++++++++++ CONTACT FORM ++++++++++++++++++++++++++++++++++++++-->
+    <div class="row titlerow">
+      <div class="col-sm-5 col-xs-4"><hr></div>
+      <div class="col-sm-2 col-xs-4">
+        <h2 class="text-center" style="color: #5e5e5e" translate="CONTACT_contactus"></h2>
+      </div>
+      <div class="col-sm-5 col-xs-4"><hr></div>
+    </div>
+
+    <div class="container" ng-controller="contactController">
+      <div class="row">
+        <div class="col-md-12">
+            <section>
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-10 col-md-offset-1">
+                      <p translate="CONTACT_sendusmessage"></p>
+                          <form ng-submit="processForm()">
+                            <div class="form-group">
+                              <input type="text" name="name" class="form-control" translate translate-attr-placeholder="CONTACT_name" translate-value-browser="{{app.browser}}" ng-model="formData.name">
+                            </div>
+                            <div class="form-group">
+                              <input type="email" name="email" class="form-control" translate translate-attr-placeholder="RESERVATION_emailaddress" translate-value-browser="{{app.browser}}" ng-model="formData.email" required>
+                            </div>
+                            <div class="form-group">
+                              <input type="tel" name="phone" class="form-control" translate translate-attr-placeholder="CONTACT_phonenumber" translate-value-browser="{{app.browser}}" ng-model="formData.phone" required>
+                            </div>
+                            <div class="form-group">
+                              <label class="notbold" for="sel1" translate="CONTACT_numguests"></label>
+                              <select class="form-control" id="sel1" name="guests" ng-model="formData.guests" required>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="notbold" translate="CONTACT_whichroom"></label>
+                                  <select class="form-control" id="sel2" name="room" ng-model="formData.room">
+                                    <option disabled="disabled" selected="selected" translate="CONTACT_selectroom"></option>
+                                    <optgroup label="Up to 4 Guests">
+                                      <option value="L'altra Camera">Camera Tagete</option>
+                                    </optgroup>
+                                    <optgroup label="Up to 2 Guests">
+                                      <option value="La Camera Rosa">Camera Oleandro</option>
+                                      <option value="La Camera Gialla">Camera Gelsomino</option>
+                                    </optgroup>
+                                    <optgroup label="Other">
+                                      <option value="No Preference">No preference</option>
+                                    </optgroup>
+                                  </select>
+                            </div>
+                            <div class="input-daterange input-group form-group" id="datepicker" ng-controller="DatepickerDemoCtrl">
+                                <div class="input-group-addon">
+                                  <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                                </div>
+                                <input type="text" ng-click="openStartDate()" class="input-sm form-control" uib-datepicker-popup="{{format}}" ng-model="formData.startDate" is-open="popup1.opened" min-date="minDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" placeholder="Check-in" />
+                                <span class="input-group-addon" translate="RESERVATION_to"></span>
+                                <input type="text" ng-click="openEndDate()" class="input-sm form-control" uib-datepicker-popup="{{format}}" ng-model="formData.endDate" is-open="popup2.opened" min-date="formData.startDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="Check-out" />
+                                <div class="input-group-addon">
+                                  <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                              <textarea name="message" rows="5" class="form-control"  translate translate-attr-placeholder="CONTACT_pleasetellus" translate-value-browser="{{app.browser}}" ng-model="formData.message"></textarea>
+                            </div>
+                            <br>
+                            <div id="messages" class="well" ng-show="message" style="background-color: lightgreen;">{{ message }}</div>
+                            <div class="center">
+                              <input type="submit" name="submit" class="btn btn-primary" value="{{'CONTACT_submit' | translate}}"/>
+                            </div>
+                          </form>
+                  </div>
+                </div>
+              </div>
+            </section>
+        </div>
+      </div>
+    </div>
+<!-- ++++++++++++++++++++++++++++++ CONTACT FORM END ++++++++++++++++++++++++++++++++++++++-->
+<br><br>
+<br><br>
+<br><br>

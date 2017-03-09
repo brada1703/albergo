@@ -3,6 +3,7 @@
     "NAVBAR_Gallery": "Gallery",
     "NAVBAR_Contact": "Contact",
 
+    "CAROUSEL_Albergo": "Albergo di Ieri",
     "CAROUSEL_Welcome": "Welcome",
     "CAROUSEL_to": "to our bed and breakfast",
     "CAROUSEL_where": "where you can find a cozy bed",
@@ -32,15 +33,15 @@
     "OURROOMS_title": "Our Rooms",
     "OURROOMS_60night": "60&euro;/night",
     "OURROOMS_camtagete": "Room with large bed and comfortable shower with separate kitchen, the perfect shelter to feel at home.",
-    "OURROOMS_upto4guests": "<img src='img/svg/avatar.svg'>&nbsp; Up to 4 Guests",
-    "OURROOMS_privatebath": "<img src='img/svg/shower.svg'>&nbsp; Private Bathrooms",
-    "OURROOMS_freeparking": "<img src='img/svg/real-state-parking-sign.svg'>&nbsp; Free Parking",
-    "OURROOMS_kingbed": "<img src='img/svg/bed.svg'>&nbsp; 1 King-Sized Bed",
-    "OURROOMS_sofabed": "<img src='img/svg/sofa.svg'>&nbsp; 1 Sofa Bed",
-    "OURROOMS_breakfast": "<img src='img/svg/coffee-cup.svg'>&nbsp; Breakfast",
+    "OURROOMS_upto4guests": "<img src='http://www.albergodiieri.com/img/svg/avatar.svg'>&nbsp; Up to 4 Guests",
+    "OURROOMS_privatebath": "<img src='http://www.albergodiieri.com/img/svg/shower.svg'>&nbsp; Private Bathrooms",
+    "OURROOMS_freeparking": "<img src='http://www.albergodiieri.com/img/svg/real-state-parking-sign.svg'>&nbsp; Free Parking",
+    "OURROOMS_kingbed": "<img src='http://www.albergodiieri.com/img/svg/bed.svg'>&nbsp; 1 King-Sized Bed",
+    "OURROOMS_sofabed": "<img src='http://www.albergodiieri.com/img/svg/sofa.svg'>&nbsp; 1 Sofa Bed",
+    "OURROOMS_breakfast": "<img src='http://www.albergodiieri.com/img/svg/coffee-cup.svg'>&nbsp; Breakfast",
     "OURROOMS_50night": "50&euro;/night",
     "OURROOMS_camoleandro": "Room for two people with double bed, private bathroom, and a view of the garden and mountains.",
-    "OURROOMS_upto2guests": "<img src='img/svg/avatar.svg'>&nbsp; Up to 2 Guests",
+    "OURROOMS_upto2guests": "<img src='http://www.albergodiieri.com/img/svg/avatar.svg'>&nbsp; Up to 2 Guests",
 
     "AMENITIES_title": "Amenities",
     "AMENITIES_breakfast": "Breakfast Included",
@@ -114,6 +115,7 @@
     "CONTACT_numguests": "Number of Guests:",
     "CONTACT_selectroom": "Select Room",
     "CONTACT_pleasetellus": "Please tell us more about your trip. For example, at what time do you plan on arriving? Do you have any special needs? Thanks!",
-    "CONTACT_submit": "Submit"
+    "CONTACT_submit": "Submit",
+    "CONTACT_guests": "Guests"
 
 }
