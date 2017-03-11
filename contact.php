@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html lang="en">
   <head>
     <title>l'Albergo di Ieri</title>
       <meta charset="utf-8">
@@ -32,7 +32,7 @@
   <body data-spy="scroll" data-target=".navbar" data-offset="80">
 
     <!-- ++++++++++++++++++++++++++++++ TOP BAR +++++++++++++++++++++++++++++++++++++++++-->
-        <div id="topbar" ng-controller="Ctrl">
+        <div id="topbar">
           <div class="text-left">
             <a href="tel:+393284833173">
               <span class="glyphicon glyphicon-earphone"></span>&nbsp; +39 328 4833173</a> |
@@ -64,13 +64,13 @@
               <span class="icon-bar"></span>
             </button>
             <img src="http://albergodiieri.com/img/logo.jpg" class="pull-left" style="height: 35px; margin-top: 5px;">
-            <a class="navbar-brand" href="http://albergodiieri.com/" style="margin-left: -29px;">Albergo di Ieri</a>
+            <a class="navbar-brand" href="#" style="margin-left: -29px;">Albergo di Ieri</a>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="index.html" translate="NAVBAR_Home"></a></li>
               <li><a href="gallery.html" translate="NAVBAR_Gallery"></a></li>
-              <li><a href="contact.html" translate="NAVBAR_Contact"></a></li>
+              <li><a href="contact.php" translate="NAVBAR_Contact"></a></li>
             </ul>
           </div>
         </div>
@@ -87,59 +87,60 @@
       </div>
     <!-- ++++++++++++++++++++++++++++++ GOOGLE MAP END ++++++++++++++++++++++++++++++++++++++-->
     <!-- ++++++++++++++++++++++++++++++ WHERE ARE WE ++++++++++++++++++++++++++++++++++++++-->
-      <div class="row titlerow">
-          <div class="col-sm-5 col-xs-4"><hr></div>
-          <div class="col-sm-2 col-xs-4"><h2 class="text-center" style="color: #5e5e5e">Where are we?</h2></div>
-          <div class="col-sm-5 col-xs-4"><hr></div>
+    <div class="row titlerow">
+        <div class="col-sm-5 col-xs-4"><hr></div>
+        <div class="col-sm-2 col-xs-4"><h2 class="text-center" style="color: #5e5e5e">Where are we?</h2></div>
+        <div class="col-sm-5 col-xs-4"><hr></div>
+    </div>
+    <div class="contactus">
+      <p>
+        Located in the Appenine mountains in the heart of Italy surrounded by fresh, clean air and immaculate nature perfect for discovering the beauty of central Italy, as well as cycling, hiking, skiing or simply resting.
+      </p>
+      <h3>From the Air</h3>
+      <div style="padding-left: 10px;">
+        <h4>From Rome - airport: approximately 4 hours</h4>
+          <ul>
+            <li>
+              Take a train or bus from the Fiumicino or Ciampino airport to Termini train station.
+            </li>
+            <li>
+              Take a <a href="http://www.trenitalia.com/tcom-en">train</a> from the Termini train station in Rome to Foligno station. This will take around 1 hour and 45 minutes and cost 10€.
+            </li>
+            <li>
+              Take a <a href="http://www.contrammobilita.it/index.php/orari-e-itinerari-contram/">bus</a> from Foligno to Serravalle. This will take about 45 minutes
+            </li>
+          </ul>
+        <h4>From Perugia - airport: approximately 3 hours</h4>
+          <ul>
+            <li>Take the bus E422 from the San Francesco d'Assisi airport in Perugia to the train station</li>
+            <li>Take the train from Perugia to Foligno. This should take about 30 minutes and cost 4€.</li>
+            <li>Take a <a href="http://www.contrammobilita.it/index.php/orari-e-itinerari-contram/">bus</a> from Foligno to Serravalle. This will take about 45 minutes</li>
+          </ul>
+        <h4>From Ancona airport: approximately 3 hours</h4>
+          <ul>
+            <li>Land in <a href="http://aeroportomarche.regione.marche.it/" target="_blank">Aeroporto delle Marche</a> with flights from Tirana, Rome - Fiumicino, and Munich</li>
+            <li>Take the <a href="http://www.trenitalia.com/tcom-en">train</a> from Castelferretti to Foligno - takes about 2 hours and costs about 8,50€</li>
+            <li>We would be happy to pick you up in Foligno. Please give us some advance notice. We'll try to accomodate you as best as we can.</li>
+          </ul>
       </div>
-      <div class="contactus">
-        <p>
-          Located in the Appenine mountains in the heart of Italy surrounded by fresh, clean air and immaculate nature perfect for discovering the beauty of central Italy, as well as cycling, hiking, skiing or simply resting.
-        </p>
-        <h3>From the Air</h3>
-        <div style="padding-left: 10px;">
-          <h4>From Rome - airport: approximately 4 hours</h4>
-            <ul>
-              <li>
-                Take a train or bus from the Fiumicino or Ciampino airport to Termini train station.
-              </li>
-              <li>
-                Take a <a href="http://www.trenitalia.com/tcom-en">train</a> from the Termini train station in Rome to Foligno station. This will take around 1 hour and 45 minutes and cost 10€.
-              </li>
-              <li>
-                Take a <a href="http://www.contrammobilita.it/index.php/orari-e-itinerari-contram/">bus</a> from Foligno to Serravalle. This will take about 45 minutes
-              </li>
-            </ul>
-          <h4>From Perugia - airport: approximately 3 hours</h4>
-            <ul>
-              <li>Take the bus E422 from the San Francesco d'Assisi airport in Perugia to the train station</li>
-              <li>Take the train from Perugia to Foligno. This should take about 30 minutes and cost 4€.</li>
-              <li>Take a <a href="http://www.contrammobilita.it/index.php/orari-e-itinerari-contram/">bus</a> from Foligno to Serravalle. This will take about 45 minutes</li>
-            </ul>
-          <h4>From Ancona airport: approximately 3 hours</h4>
-            <ul>
-              <li>Land in <a href="http://aeroportomarche.regione.marche.it/" target="_blank">Aeroporto delle Marche</a> with flights from Tirana, Rome - Fiumicino, and Munich</li>
-              <li>Take the <a href="http://www.trenitalia.com/tcom-en">train</a> from Castelferretti to Foligno - takes about 2 hours and costs about 8,50€</li>
-              <li>We would be happy to pick you up in Foligno. Please give us some advance notice. We'll try to accomodate you as best as we can.</li>
-            </ul>
-        </div>
-        <h3>Trains and Busses</h3>
-        <div style="padding-left: 10px;">
-          <h4>Trainstations</h4>
-            <p>
-              The closest train stations are Foligno, Tolentino, Gualdo Tadino, and Nocera Umbra.
-            </p>
-          <h4>Busses</h4>
-            <p>
-              There are busses from the train stations listed above. Please review their <a href="http://www.contrammobilita.it/index.php/orari-e-itinerari-contram/">hours and availability</a>.
-            </p>
-          <h4>Private transport</h4>
-            <p>
-              For other options and private transport, please contact us below.
-            </p>
-        </div>
+      <h3>Trains and Busses</h3>
+      <div style="padding-left: 10px;">
+        <h4>Trainstations</h4>
+          <p>
+            The closest train stations are Foligno, Tolentino, Gualdo Tadino, and Nocera Umbra.
+          </p>
+        <h4>Busses</h4>
+          <p>
+            There are busses from the train stations listed above. Please review their <a href="http://www.contrammobilita.it/index.php/orari-e-itinerari-contram/">hours and availability</a>.
+          </p>
+        <h4>Private transport</h4>
+          <p>
+            For other options and private transport, please contact us below.
+          </p>
       </div>
+    </div>
     <!-- ++++++++++++++++++++++++++++++ WHERE ARE WE END ++++++++++++++++++++++++++++++++++++++-->
+
     <!-- ++++++++++++++++++++++++++++++ CONTACT FORM ++++++++++++++++++++++++++++++++++++++-->
       <div class="row titlerow">
           <div class="col-sm-5 col-xs-4"><hr></div>
@@ -219,12 +220,10 @@
             </div>
           </div>
         </div>
-        <br>
-        <br>
-        <br>
     <!-- ++++++++++++++++++++++++++++++ CONTACT FORM END ++++++++++++++++++++++++++++++++++++++-->
+
     <!-- ++++++++++++++++++++++++++++++++++++++  FOOTER  +++++++++++++++++++++++++++++++++-->
-      <div class="footer">
+      <div class="footer" style="margin-top: 20px;">
         <div class="row footertext">
           <div class="col-sm-3"></div>
           <!-- ADDRESS -->
@@ -238,7 +237,7 @@
             <div class="col-sm-3">
               <p><span class="glyphicon glyphicon-earphone"></span>
                       <a href="tel:+393284833173">+39 328 4833173</a> <br>
-                      <span translate="FOOTER_or"></span> <a href="tel:+393294193814">+39 329 4193814</a></p>
+                      or <a href="tel:+393294193814">+39 329 4193814</a></p>
                     <p><span class="glyphicon glyphicon-envelope"></span>
                         <!-- ++++++++++  ENCRYPTED EMAIL ADDRESS +++++++++++-->
                           <script type="text/javascript">
@@ -259,7 +258,7 @@
           <div class="col-sm-3"></div>
           <!-- SOCIAL MEDIA ****** CHANGE WITH THE DIFFERENT LANGUAGES ********-->
             <div class="col-sm-6">
-              <span translate="FOOTER_asseenon"></span>
+              As seen on:
                 <a href="https://www.facebook.com/BedAndBreakfastLAlbergoDiIeri/" target="_blank"><img src="img/svg/social-media.svg" style="height: 24px;"></a>
                 <a href="https://www.airbnb.com/rooms/14165433?sug=50" target="_blank"><img src="img/svg/airbnb.svg" style="height: 24px;"></a>
                 <a href="https://www.tripadvisor.com/Hotel_Review-g887086-d3140630-Reviews-L_Albergo_di_Ieri-Serravalle_di_Chienti_Province_of_Macerata_Marche.html" target="_blank"><img src="img/svg/tripadvisor-logotype.svg" style="height: 24px;"></a>

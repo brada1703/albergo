@@ -1,53 +1,37 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
-<head>
-    <meta charset="UTF-8">
-    <title>Albergo di Ieri</title>
-    <!-- CSS and JS -->
-        <!-- CSS -->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-            <link rel="stylesheet" href="styles.css">
-        <!-- END CSS -->
-        <!-- JS -->
-            <!-- FOR BOOTSTRAP CAROUSELS -->
-                <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-            <!-- END BOOTSTRAP CAROUSELS -->
-            <!-- FOR ANGULAR ROUTING, ANGULAR TRANSLATE, CAROUSELS -->
-                <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
-            <!-- END ANGULAR ROUTING, ANGULAR TRANSLATE, CAROUSELS -->
-            <!-- FOR CAROUSELS, CONTACT FORM -->
-                <script src="https://code.angularjs.org/1.5.5/angular-animate.min.js"></script>
-                <!-- DO NOT CHANGE - OTHERWISE DATEPICKER WON'T WORK (Can select end dates before start dates) -->
-                <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.0.0.js"></script>
-                <!-- DO NOT CHANGE - OTHERWISE DATEPICKER WON'T WORK (Can select end dates before start dates) -->
-            <!-- END CAROUSELS, CONTACT FORM -->
-            <!-- FOR ANGULAR ROUTING, ANGULAR TRANSLATE -->
-                <script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
-            <!-- END FOR ANGULAR ROUTING -->
-            <!-- FOR ANGULAR TRANSLATE -->
-                <script src="https://cdn.rawgit.com/SlexAxton/messageformat.js/v0.3.1/messageformat.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-cookies.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-sanitize.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.10.0/angular-translate.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-interpolation-messageformat/2.10.0/angular-translate-interpolation-messageformat.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-storage-cookie/2.10.0/angular-translate-storage-cookie.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-storage-local/2.10.0/angular-translate-storage-local.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-url/2.10.0/angular-translate-loader-url.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-static-files/2.10.0/angular-translate-loader-static-files.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-handler-log/2.10.0/angular-translate-handler-log.js"></script>
-            <!-- END FOR ANGULAR TRANSLATE -->
-                <script src="app.js"></script>
-                <script src="styles.js"></script>
-        <!-- END JS -->
-    <!-- END CSS and JS -->
-    <!-- OTHER SHIT -->
-        <link rel="shortcut icon" href="img/mountain.ico" type="image/x-icon">
-    <!-- END OTHER SHIT -->
-</head>
-<body>
-    <!-- ++++++++++++++++++++++++++++++ TOP BAR ++++++++++++++++++++++++++++++ -->
+  <head>
+    <title>l'Albergo di Ieri</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link async rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+      <link async rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link async rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+      <link async href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+      <link async rel="stylesheet" href="css/override.css">
+      <!-- FOR ANGULAR TRANSLATE -->
+        <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+        <script async src="https://code.angularjs.org/1.5.5/angular-animate.min.js"></script>
+        <script async src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+        <script async src="https://cdn.rawgit.com/SlexAxton/messageformat.js/v0.3.1/messageformat.js"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-cookies.js"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-sanitize.js"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.10.0/angular-translate.js"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-interpolation-messageformat/2.10.0/angular-translate-interpolation-messageformat.js"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-storage-cookie/2.10.0/angular-translate-storage-cookie.js"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-storage-local/2.10.0/angular-translate-storage-local.js"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-url/2.10.0/angular-translate-loader-url.js"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-static-files/2.10.0/angular-translate-loader-static-files.js"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-handler-log/2.10.0/angular-translate-handler-log.js"></script>
+      <!-- END ANGULAR TRANSLATE -->
+      <script async src="app.js"></script>
+      <script async src='https://www.google.com/recaptcha/api.js'></script>
+      <link rel="shortcut icon" href="img/mountain.ico" type="image/x-icon">
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="80">
+
+    <!-- TOP BAR -->
         <div id="topbar" ng-controller="Ctrl">
           <div class="text-left">
             <a href="tel:+393284833173">
@@ -57,11 +41,11 @@
           </div>
           <div class="text-right">
             <div class="dropdown" style="display: inline-block;">
-              <a style="cursor: pointer;" class="dropdown-toggle" id="languageMenuTop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <a href="#" class="dropdown-toggle" id="languageMenuTop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 <span class="glyphicon glyphicon-globe" style="font-size: 14px;"></span>&nbsp; Language</a>
-                <ul class="dropdown-menu" aria-labelledby="languageMenuTop" style="z-index: 999;">
-                  <li style="z-index: 999;"><a style="cursor: pointer;" role="menuitem" tabindex="-1" ng-click="changeLanguage('en')">English</a></li>
-                  <li style="z-index: 999;"><a style="cursor: pointer;" role="menuitem" tabindex="-1" ng-click="changeLanguage('it')">Italiano</a></li>
+                <ul class="dropdown-menu" aria-labelledby="languageMenuTop">
+                  <li><a style="cursor: pointer;" role="menuitem" tabindex="-1" ng-click="changeLanguage('en')">English</a></li>
+                  <li><a style="cursor: pointer;" role="menuitem" tabindex="-1" ng-click="changeLanguage('it')">Italiano</a></li>
             </div> |
             <div style="display: inline-block;">
               <a href="https://www.facebook.com/BedAndBreakfastLAlbergoDiIeri/">
@@ -69,9 +53,9 @@
             </div>
           </div>
         </div>
-    <!-- ++++++++++++++++++++++++++++++ TOP BAR END ++++++++++++++++++++++++++++++ -->
+    <!--  TOP BAR END -->
     <!-- ++++++++++++++++++++++++++++++ NAVBAR  +++++++++++++++++++++++++++++++++++++++++-->
-      <nav class="navbar navbar-default ontop" style="z-index: 99;">
+      <nav class="navbar navbar-default ontop">
         <div class="container-fluid"  data-spy="affix" data-offset-top="40">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -80,19 +64,444 @@
               <span class="icon-bar"></span>
             </button>
             <img src="http://albergodiieri.com/img/logo.jpg" class="pull-left" style="height: 35px; margin-top: 5px;">
-            <a class="navbar-brand" href="#/" style="margin-left: -29px;">Albergo di Ieri</a>
+            <a class="navbar-brand" href="http://albergodiieri.com/" style="margin-left: -29px;">Albergo di Ieri</a>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#/" translate="NAVBAR_Home"></a></li>
-              <li><a href="#/gallery" translate="NAVBAR_Gallery"></a></li>
-              <li><a href="#/contact" translate="NAVBAR_Contact"></a></li>
+              <li><a href="index.html" translate="NAVBAR_Home"></a></li>
+              <li><a href="gallery.html" translate="NAVBAR_Gallery"></a></li>
+              <li><a href="contact.html" translate="NAVBAR_Contact"></a></li>
             </ul>
           </div>
         </div>
       </nav>
     <!-- ++++++++++++++++++++++++++++++ NAVBAR END ++++++++++++++++++++++++++++++++++++++-->
-    <div ng-view></div>
+    <!-- ++++++++++++++++++++++++++++++ MAIN CAROUSEL +++++++++++++++++++++++++++++++++++-->
+      <div id="theCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class ="slide1"></div>
+            <div class="carousel-caption">
+              <h1 translate="CAROUSEL_Welcome"></h1>
+              <p translate="CAROUSEL_to"></p>
+              <!-- <p><a href="#reserve" class="btn btn-primary btn-sm booknow">Book Now</a></p> -->
+            </div>
+          </div>
+          <div class="item">
+            <div class="slide2"></div>
+            <div class="carousel-caption">
+            <h1 translate="CAROUSEL_Albergo"></h1>
+              <p translate="CAROUSEL_where"></p>
+              <!-- <p><a href="#reserve" class="btn btn-primary btn-sm booknow">Book Now</a></p> -->
+            </div>
+          </div>
+          <div class="item">
+            <div class="slide3"></div>
+            <div class="carousel-caption">
+              <h1 translate="CAROUSEL_award"></h1>
+              <p translate="CAROUSEL_as" style="font-size: calc(7px + 2vw)"></p>
+              <!-- <p><a href="#reserve" class="btn btn-primary btn-sm booknow">Book Now</a></p> -->
+            </div>
+          </div>
+          <div class="item">
+            <div class="slide4"></div>
+            <div class="carousel-caption">
+              <h1 translate="CAROUSEL_beautiful"></h1>
+              <p translate="CAROUSEL_fresh"></p>
+              <!-- <p><a href="#reserve" class="btn btn-primary btn-sm booknow">Book Now</a></p> -->
+            </div>
+          </div>
+          <div class="item">
+            <div class="slide5"></div>
+            <div class="carousel-caption">
+              <h1 translate="CAROUSEL_rustic"></h1>
+              <p translate="CAROUSEL_and"></p>
+              <!-- <p><a href="#reserve" class="btn btn-primary btn-sm booknow">Book Now</a></p> -->
+            </div>
+          </div>
+        </div>
+          <a class="left carousel-control" href="#theCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+          <a class="right carousel-control" href="#theCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div>
+    <!-- ++++++++++++++++++++++++++++ MAIN CAROUSEL END +++++++++++++++++++++++++++++++++-->
+    <!-- ++++++++++++++++++++++++++++++ RESERVATION BAR  +++++++++++++++++++++++++++++++++++++++++-->
+      <div id="registrationform" ng-controller="contactController">
+          <div class="registration row">
+              <form ng-submit="processForm()" class="form-inline" autocomplete="on">
+                  <div class="col-sm-2" data-toggle="tooltip" data-placement="bottom" title="Email Address" ng-hide="message">
+                      <div class="form-group">
+                          <input type="email" name="email" class="form-control" translate translate-attr-placeholder="RESERVATION_emailaddress" translate-value-browser="{{app.browser}}" ng-model="formData.email" required>
+                      </div>
+                  </div>
+                  <div class="col-sm-2" data-toggle="tooltip" data-placement="bottom" title="Include Country Code" ng-hide="message">
+                      <div class="form-group">
+                          <input type="tel" name="phone" class="form-control" translate translate-attr-placeholder="RESERVATION_phone" translate-value-browser="{{app.browser}}" ng-model="formData.phone" required>
+                      </div>
+                  </div>
+                  <div class="col-sm-1" data-toggle="tooltip" data-placement="bottom" title="Number of Guests" ng-hide="message">
+                    <div class="form-group">
+                        <select class="form-control" id="sel1" name="guests" ng-model="formData.guests" required>
+                          <option disabled="disabled" selected="selected" translate="CONTACT_guests"></option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-2" data-toggle="tooltip" data-placement="bottom" title="Select Room" ng-hide="message">
+                    <div class="form-group">
+                        <select class="form-control" id="sel2" name="room" ng-model="formData.room">
+                          <option disabled="disabled" selected="selected" translate="CONTACT_selectroom"></option>
+                          <optgroup label="Up to 4 Guests">
+                            <option value="Camera Tagete">Camera Tagete</option>
+                          </optgroup>
+                          <optgroup label="Up to 2 Guests">
+                            <option value="Camera Oleandro">Camera Oleandro</option>
+                            <option value="Camera Gelsomino">Camera Gelsomino</option>
+                          </optgroup>
+                          <optgroup label="Other">
+                            <option value="No Preference">No preference</option>
+                          </optgroup>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-4" data-toggle="tooltip" data-placement="bottom" title="Check-in after noon. Check-out before 10a.m." ng-hide="message">
+                      <!-- +++++++++++  DATEPICKER ++++++++++++++++-->
+                        <div class="input-daterange input-group form-group" id="datepicker" style="margin-top: 3px;">
+                            <!-- <label for="start">Check-in</label> -->
+                            <div class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                            </div>
+                            <input type="text" class="input-sm form-control" name="start" placeholder="Check-in" ng-model="formData.startDate"/>
+                            <span class="input-group-addon">to</span>
+                            <!-- <label for="end">Check-out</label> -->
+                            <input type="text" class="input-sm form-control" name="end" placeholder="Check-out" ng-model="formData.endDate"/>
+                            <div class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                      <!-- +++++++++++  DATEPICKER END ++++++++++++-->
+                  </div>
+                  <div class="col-sm-1" ng-hide="message">
+                  <input type="submit" name="submit" class="btn btn-primary" value="{{'RESERVATION_booknow' | translate}}"/>
+              </div>
+              <div id="messages" class="well" ng-show="message" ng-hide="!message" style="background-color: lightgreen;">{{ message }}</div>
+          </form>
+          </div>
+      </div>
+    <!-- ++++++++++++++++++++++++++++++ RESERVATION BAR  END +++++++++++++++++++++++++++++++++++++++++-->
+
+<br><br><br>
+
+<!-- ++++++++++++++++++++++++++++++ OUR ROOMS ++++++++++++++++++++++++++++++++++++++-->
+  <div class="row titlerow">
+      <div class="col-sm-5 col-xs-4"><hr></div>
+      <div class="col-sm-2 col-xs-4"><h2 class="text-center" style="color: #5e5e5e" translate="OURROOMS_title"></h2></div>
+      <div class="col-sm-5 col-xs-4" style="z-index: -999;"><hr></div>
+  </div>
+
+  <div class="row" class="text-center" id="roomslist">
+      <div class="col-lg-4 col-sm-6 col-xs-12">
+          <div class="montage-wrap">
+              <div class="montage-block">
+                  <div class="block1">
+                      <div class="roompicture-altracamera"></div>
+                      <div class="roominfo">
+                          <div class="name">
+                              <p>Camera Tagete</p>
+                          </div>
+                          <div class="price">
+                              <p translate="OURROOMS_60night"></p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="thumb_content">
+                      <div class="titleinfo">
+                          <h1>Camera Tagete</h1>
+                          <p translate="OURROOMS_camtagete"></p>
+                      </div>
+                      <div class="infolist">
+                          <div class="left">
+                              <p translate="OURROOMS_upto4guests"></p>
+                              <p translate="OURROOMS_privatebath"></p>
+                              <p translate="OURROOMS_freeparking"></p>
+                          </div>
+                          <div class="right">
+                              <p translate="OURROOMS_kingbed"></p>
+                              <p translate="OURROOMS_sofabed"></p>
+                              <p translate="OURROOMS_breakfast"></p>
+                          </div>
+                      </div>
+                      <div class="booknow">
+                          <a class="btn btn-primary btn-xs" id="cameratagete" role="button" href="#theCarousel" data-toggle="tooltip" data-placement="top" title="Extra Guests: &euro;10 / night after the first guest"
+                          data-placement="bottom" translate="RESERVATION_selectroom"></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 col-xs-12">
+          <div class="montage-wrap">
+              <div class="montage-block">
+                  <div class="block1">
+                      <div class="roompicture-camerarosa"></div>
+                      <div class="roominfo">
+                          <div class="name">
+                              <p>Camera Oleandro</p>
+                          </div>
+                          <div class="price">
+                              <p translate="OURROOMS_50night"></p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="thumb_content">
+                      <div class="titleinfo">
+                          <h1>Camera Oleandro</h1>
+                          <p translate="OURROOMS_camoleandro"></p>
+                      </div>
+                      <div class="infolist">
+                          <div class="left">
+                              <p translate="OURROOMS_upto2guests"></p>
+                              <p translate="OURROOMS_privatebath"></p>
+                              <p translate="OURROOMS_freeparking"></p>
+                          </div>
+                          <div class="right">
+                              <p translate="OURROOMS_kingbed"></p>
+                              <p translate="OURROOMS_breakfast"></p>
+                          </div>
+                      </div>
+                      <div class="booknow">
+                          <a class="btn btn-primary btn-xs" id="cameraoleandro" role="button" href="#theCarousel" data-toggle="tooltip" data-placement="top" title="Extra Guests: &euro;10 / night after the first guest"
+                          data-placement="bottom" translate="RESERVATION_selectroom"></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-sm-12 col-xs-12">
+          <div class="montage-wrap">
+              <div class="montage-block">
+                  <div class="block1">
+                      <div class="roompicture-cameragialla"></div>
+                      <div class="roominfo">
+                          <div class="name">
+                              <p>Camera Gelsomino</p>
+                          </div>
+                          <div class="price">
+                              <p translate="OURROOMS_50night"></p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="thumb_content">
+                      <div class="titleinfo">
+                          <h1>Camera Gelsomino</h1>
+                          <p translate="OURROOMS_camoleandro"></p>
+                      </div>
+                      <div class="infolist">
+                          <div class="left">
+                              <p translate="OURROOMS_upto2guests"></p>
+                              <p translate="OURROOMS_privatebath"></p>
+                              <p translate="OURROOMS_freeparking"></p>
+                          </div>
+                          <div class="right">
+                              <p translate="OURROOMS_kingbed"></p>
+                              <p translate="OURROOMS_breakfast"></p>
+                          </div>
+                      </div>
+                      <div class="booknow">
+                          <a class="btn btn-primary btn-xs" id="cameragelsomino" role="button" href="#theCarousel" data-toggle="tooltip" data-placement="top" title="Extra Guests: &euro;10 / night after the first guest" data-placement="bottom" translate="RESERVATION_selectroom"></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+<!-- ++++++++++++++++++++++++++++++ OUR ROOMS END ++++++++++++++++++++++++++++++++++++++-->
+    <br><br><br>
+<!-- ++++++++++++++++++++++++++++++ OUR AMENITIES ++++++++++++++++++++++++++++++++++++++-->
+  <div class="row titlerow">
+      <div class="col-sm-5 col-xs-4"><hr></div>
+      <div class="col-sm-2 col-xs-4"><h2 class="text-center" style="color: #5e5e5e" translate="AMENITIES_title"></h2></div>
+      <div class="col-sm-5 col-xs-4"><hr></div>
+  </div>
+
+  <div class="row amenities" style="margin-left: 0.1em; margin-right: 0.1em;">
+      <div class="col-xs-3 amenity1">
+          <div class="roundelement">
+              <p>
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                       viewBox="0 0 511 511" style="enable-background:new 0 0 511 511" xml:space="preserve">
+                      <path d="m399.5,192h-32c-5.647,0-11.161,0.742-16.5,2.177v-34.677c0-8.547-6.953-15.5-15.5-15.5h-272c-8.547,0-15.5,6.953-15.5,15.5v280c0,19.43 14.106,35.617 32.613,38.887 3.27,18.506 19.457,32.613 38.887,32.613h160c19.43,0 35.617-14.107 38.887-32.613 18.507-3.27 32.613-19.457 32.613-38.887v-26.678c5.339,1.436 10.854,2.178 16.5,2.178h32c35.014,0 63.5-28.486 63.5-63.5v-96c0-35.014-28.486-63.5-63.5-63.5zm-48.5,63.5c0-9.098 7.402-16.5 16.5-16.5h32c9.098,0 16.5,7.402 16.5,16.5v96c0,9.098-7.402,16.5-16.5,16.5h-32c-9.098,0-16.5-7.402-16.5-16.5v-96zm-71.5,240.5h-160c-10.894,0-20.146-7.149-23.321-17h206.643c-3.176,9.851-12.428,17-23.322,17zm56.5-56.5c0,13.509-10.991,24.5-24.5,24.5h-224c-13.509,0-24.5-10.991-24.5-24.5v-280c0-0.276 0.224-0.5 0.5-0.5h272c0.276,0 0.5,0.224 0.5,0.5v280zm112-88c0,26.743-21.757,48.5-48.5,48.5h-32c-5.707,0-11.235-0.98-16.5-2.89v-18.792c4.802,2.965 10.454,4.681 16.5,4.681h32c17.369,0 31.5-14.131 31.5-31.5v-96c0-17.369-14.131-31.5-31.5-31.5h-32c-6.046,0-11.698,1.716-16.5,4.681v-18.792c5.264-1.91 10.792-2.889 16.5-2.889h32c26.743,0 48.5,21.757 48.5,48.5v96.001z"/>
+                      <path d="m184,119.5c0,4.142 3.358,7.5 7.5,7.5s7.5-3.358 7.5-7.5c0-6.554 2.464-9.427 6.193-13.776 4.369-5.095 9.807-11.436 9.807-23.541 0-12.109-5.437-18.454-9.805-23.551-3.73-4.353-6.195-7.229-6.195-13.791s2.464-9.438 6.195-13.791c4.368-5.096 9.805-11.441 9.805-23.55 0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5c0,6.562-2.464,9.438-6.195,13.791-4.368,5.097-9.805,11.441-9.805,23.551s5.437,18.454 9.805,23.551c3.73,4.353 6.195,7.229 6.195,13.791 0,6.554-2.464,9.427-6.193,13.776-4.369,5.095-9.807,11.436-9.807,23.54z"/>
+                      <path d="m224,119.5c0,4.142 3.358,7.5 7.5,7.5s7.5-3.358 7.5-7.5c0-6.554 2.464-9.427 6.193-13.776 4.369-5.095 9.807-11.436 9.807-23.541 0-12.109-5.437-18.454-9.805-23.551-3.73-4.353-6.195-7.229-6.195-13.791 0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5c0,12.109 5.437,18.454 9.805,23.551 3.73,4.353 6.195,7.229 6.195,13.791 0,6.554-2.464,9.427-6.193,13.776-4.369,5.096-9.807,11.437-9.807,23.541z"/>
+                      <path d="m144,119.5c0,4.142 3.358,7.5 7.5,7.5s7.5-3.358 7.5-7.5c0-6.554 2.464-9.427 6.193-13.776 4.369-5.095 9.807-11.436 9.807-23.541 0-12.109-5.437-18.454-9.805-23.551-3.73-4.353-6.195-7.229-6.195-13.791 0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5c0,12.109 5.437,18.454 9.805,23.551 3.73,4.353 6.195,7.229 6.195,13.791 0,6.554-2.464,9.427-6.193,13.776-4.369,5.096-9.807,11.437-9.807,23.541z"/>
+                      <path d="m311.5,176c-4.142,0-7.5,3.358-7.5,7.5v24c0,4.142 3.358,7.5 7.5,7.5s7.5-3.358 7.5-7.5v-24c0-4.142-3.358-7.5-7.5-7.5z"/>
+                      <path d="m311.5,232c-4.142,0-7.5,3.358-7.5,7.5v120c0,4.142 3.358,7.5 7.5,7.5s7.5-3.358 7.5-7.5v-120c0-4.142-3.358-7.5-7.5-7.5z"/>
+                  </svg>
+              </p>
+          </div>
+          <div class="amenitytitle">
+            <h5 translate="AMENITIES_breakfast"></h5>
+          </div>
+          <div class="moreinfo">
+            <p translate="AMENITIES_breakfastinfo"></p>
+          </div>
+      </div>
+      <div class="col-xs-3 amenity2">
+          <div class="roundelement">
+              <p>
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                       viewBox="0 0 63.445 63.445" style="enable-background:new 0 0 63.445 63.445" xml:space="preserve">
+                      <path d="M21.572,28.926c5.067,0,9.19-5.533,9.19-12.334s-4.123-12.334-9.19-12.334c-5.067,0-9.19,5.533-9.19,12.334
+                          S16.504,28.926,21.572,28.926z M21.572,7.258c3.355,0,6.19,4.275,6.19,9.334s-2.834,9.334-6.19,9.334
+                          c-3.356,0-6.19-4.275-6.19-9.334S18.216,7.258,21.572,7.258z"/>
+                      <path d="M48.83,40.922c-0.189-0.256-0.37-0.498-0.466-0.707c-2.054-4.398-7.689-9.584-16.813-9.713L31.2,30.5
+                          c-8.985,0-14.576,4.912-16.813,9.51c-0.077,0.156-0.247,0.361-0.427,0.576c-0.212,0.254-0.423,0.512-0.604,0.793
+                          c-1.89,2.941-2.853,6.25-2.711,9.318c0.15,3.26,1.512,5.877,3.835,7.369c0.937,0.604,1.95,0.907,3.011,0.907
+                          c2.191,0,4.196-1.233,6.519-2.664c1.476-0.907,3.002-1.848,4.698-2.551c0.191-0.063,0.968-0.158,2.241-0.158
+                          c1.515,0,2.6,0.134,2.833,0.216c1.653,0.729,3.106,1.688,4.513,2.612c2.154,1.418,4.188,2.759,6.395,2.759
+                          c0.947,0,1.867-0.248,2.732-0.742c4.778-2.715,5.688-10.162,2.03-16.603C49.268,41.52,49.048,41.219,48.83,40.922z M45.939,55.838
+                          c-0.422,0.238-0.818,0.35-1.25,0.35c-1.308,0-2.9-1.049-4.746-2.264c-1.438-0.947-3.066-2.02-4.949-2.852
+                          c-0.926-0.41-2.934-0.472-4.046-0.472c-1.629,0-2.76,0.128-3.362,0.375c-1.943,0.808-3.646,1.854-5.149,2.779
+                          c-1.934,1.188-3.604,2.219-4.946,2.219c-0.49,0-0.931-0.137-1.389-0.432c-1.483-0.953-2.356-2.724-2.461-4.984
+                          c-0.113-2.45,0.682-5.135,2.238-7.557c0.113-0.177,0.25-0.334,0.383-0.492c0.274-0.328,0.586-0.701,0.823-1.188
+                          c1.84-3.781,6.514-7.82,14.115-7.82l0.308,0.002c7.736,0.109,12.451,4.369,14.137,7.982c0.225,0.479,0.517,0.875,0.773,1.223
+                          c0.146,0.199,0.301,0.4,0.426,0.619C49.684,48.326,49.279,53.939,45.939,55.838z"/>
+                      <path d="M41.111,28.926c5.068,0,9.191-5.533,9.191-12.334S46.18,4.258,41.111,4.258c-5.066,0-9.189,5.533-9.189,12.334
+                          S36.044,28.926,41.111,28.926z M41.111,7.258c3.355,0,6.191,4.275,6.191,9.334s-2.834,9.334-6.191,9.334
+                          c-3.355,0-6.189-4.275-6.189-9.334S37.756,7.258,41.111,7.258z"/>
+                      <path d="M56.205,22.592c-4.061,0-7.241,4.213-7.241,9.59c0,5.375,3.181,9.588,7.241,9.588s7.24-4.213,7.24-9.588
+                          C63.445,26.805,60.266,22.592,56.205,22.592z M56.205,38.77c-2.299,0-4.241-3.018-4.241-6.588c0-3.572,1.942-6.59,4.241-6.59
+                          s4.24,3.018,4.24,6.59C60.445,35.752,58.503,38.77,56.205,38.77z"/>
+                      <path d="M14.482,32.182c0-5.377-3.181-9.59-7.241-9.59S0,26.805,0,32.182c0,5.375,3.181,9.588,7.241,9.588
+                          S14.482,37.557,14.482,32.182z M7.241,38.77C4.942,38.77,3,35.752,3,32.182c0-3.572,1.942-6.59,4.241-6.59
+                          c2.299,0,4.241,3.018,4.241,6.59C11.482,35.752,9.54,38.77,7.241,38.77z"/>
+                  </svg>
+              </p>
+          </div>
+          <div class="amenitytitle">
+            <h5 translate="AMENITIES_pets"></h5>
+          </div>
+          <div class="moreinfo">
+            <p translate="AMENITIES_petsinfo"></p>
+          </div>
+      </div>
+      <div class="col-xs-3 amenity3">
+          <div class="roundelement">
+              <p>
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                       viewBox="0 0 381.678 381.678" style="enable-background:new 0 0 381.678 381.678" xml:space="preserve">
+                      <path d="M374.989,190.691l-10.216-6.854l-7.761-21.44c-1.352-3.734-4.785-6.315-8.749-6.575l-107.727-7.065
+                        l-31.874-22.369c-16.114-11.308-36.34-15.188-55.494-10.644l-23.529,5.583c-25.215,5.982-49.437,15.61-71.846,28.436
+                        c-0.313-0.03-0.629-0.048-0.95-0.048H29.985l-9.074-9.074c-3.905-3.905-10.237-3.905-14.143,0c-3.905,3.905-3.905,10.237,0,14.143
+                        l12.003,12.003c1.875,1.875,4.419,2.929,7.071,2.929h1.918c-5.84,4.469-11.506,9.177-16.971,14.122
+                        c-2.095,1.896-3.291,4.589-3.291,7.415v8.262L1.04,212.55c-0.684,1.38-1.04,2.9-1.04,4.44c0,12.406,10.093,22.499,22.499,22.499
+                        h36.258c4.41,16.286,19.31,28.304,36.971,28.304s32.562-12.018,36.971-28.304h123.539c4.41,16.286,19.31,28.304,36.971,28.304
+                        s32.562-12.018,36.971-28.304h24.834c10.034,0,18.94-6.746,21.659-16.406l4.435-15.768
+                        C382.881,201.017,380.422,194.336,374.989,190.691z M357.421,217.666c-0.302,1.073-1.291,1.823-2.406,1.823h-24.834
+                        c-4.41-16.286-19.31-28.304-36.971-28.304s-32.562,12.018-36.971,28.304H132.699c-4.41-16.286-19.31-28.304-36.971-28.304
+                        s-32.562,12.018-36.971,28.304H22.499c-0.846,0-1.596-0.423-2.048-1.068l6.009-12.126c0.684-1.38,1.04-2.9,1.04-4.44v-6.113
+                        c30.51-26.634,67.328-45.602,106.755-54.955l23.529-5.583c13.597-3.226,27.952-0.471,39.389,7.555l34.167,23.979
+                        c1.5,1.053,3.261,1.673,5.09,1.793l104,6.821l6.65,18.371c0.724,1.999,2.066,3.716,3.831,4.9l9.982,6.697L357.421,217.666z
+                         M311.514,229.489c0,10.093-8.211,18.304-18.304,18.304s-18.304-8.211-18.304-18.304s8.211-18.304,18.304-18.304
+                        S311.514,219.396,311.514,229.489z M114.032,229.489c0,10.093-8.211,18.304-18.304,18.304s-18.304-8.211-18.304-18.304
+                        s8.211-18.304,18.304-18.304S114.032,219.396,114.032,229.489z"/>
+                  </svg>
+              </p>
+          </div>
+          <div class="amenitytitle">
+            <h5 translate="AMENITIES_transportation"></h5>
+          </div>
+          <div class="moreinfo">
+            <p translate="AMENITIES_transportationinfo"></p>
+          </div>
+      </div>
+      <div class="col-xs-3 amenity4">
+          <div class="roundelement">
+              <p>
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                       viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002" xml:space="preserve">
+                      <path d="M405.391,149.39c0-19.468-15.839-35.308-35.307-35.308c-2.847,0-10.521,0.627-40.934,5.009
+                          c24.601-18.403,30.474-23.39,32.487-25.403c6.669-6.669,10.342-15.536,10.342-24.966c0-9.432-3.673-18.299-10.342-24.966
+                          c-6.669-6.67-15.536-10.342-24.967-10.342s-18.298,3.672-24.965,10.341c-2.012,2.012-6.998,7.884-25.404,32.488
+                          c4.383-30.414,5.009-38.087,5.009-40.935C291.309,15.839,275.47,0,256.002,0s-35.308,15.839-35.308,35.308
+                          c0,2.847,0.627,10.521,5.009,40.935c-18.405-24.603-23.391-30.475-25.403-32.487c-6.669-6.67-15.536-10.342-24.967-10.342
+                          s-18.298,3.672-24.967,10.341c-13.766,13.766-13.766,36.166,0,49.934c2.013,2.013,7.888,6.999,32.487,25.402
+                          c-30.413-4.383-38.087-5.009-40.934-5.009c-19.468,0-35.308,15.839-35.308,35.308c0,19.469,15.839,35.308,35.308,35.308
+                          c2.847,0,10.521-0.627,40.934-5.009c-24.599,18.403-30.474,23.389-32.488,25.403c-13.765,13.767-13.765,36.167,0,49.932
+                          c6.669,6.67,15.536,10.342,24.966,10.342c9.431,0,18.298-3.672,24.967-10.341c2.012-2.012,6.998-7.885,25.403-32.488
+                          c-4.383,30.414-5.009,38.087-5.009,40.935c0,16.576,11.486,30.514,26.915,34.292v106.063
+                          c-6.146-11.246-13.904-21.646-23.177-30.919c-3.278-3.277-8.593-3.277-11.869,0c-3.278,3.279-3.278,8.593,0,11.871
+                          c14.934,14.932,25.435,33.171,30.78,53.288c-20.117-5.346-38.355-15.849-53.287-30.783c-14.931-14.93-25.433-33.166-30.779-53.279
+                          c6.45,1.72,12.741,3.98,18.805,6.758c4.212,1.93,9.196,0.082,11.127-4.133c1.932-4.215,0.081-9.197-4.134-11.127
+                          c-11.216-5.14-23.11-8.724-35.35-10.652c-2.651-0.414-5.342,0.459-7.241,2.356c-1.898,1.898-2.774,4.59-2.356,7.241
+                          c4.479,28.457,17.64,54.291,38.057,74.708c19.145,19.145,43.054,31.91,69.424,37.12v47.332c0,4.637,3.758,8.393,8.393,8.393
+                          c4.635,0,8.393-3.757,8.393-8.393v-47.725c25.651-5.429,48.912-18.021,67.619-36.727c20.417-20.417,33.577-46.251,38.057-74.708
+                          c0.417-2.651-0.459-5.342-2.356-7.241c-1.898-1.897-4.586-2.766-7.241-2.356c-28.456,4.48-54.29,17.64-74.707,38.057
+                          c-8.39,8.39-15.532,17.707-21.372,27.732V297.765c15.428-3.777,26.914-17.716,26.914-34.292c0-2.847-0.627-10.521-5.009-40.935
+                          c18.405,24.603,23.391,30.475,25.403,32.487c6.669,6.67,15.536,10.342,24.966,10.342s18.298-3.672,24.966-10.341
+                          c6.669-6.669,10.342-15.536,10.342-24.968c0-9.431-3.673-18.298-10.342-24.968c-2.013-2.012-7.886-6.998-32.486-25.402
+                          c30.413,4.383,38.087,5.009,40.934,5.009C389.552,184.698,405.391,168.859,405.391,149.39z M297.636,384.777
+                          c14.934-14.934,33.171-25.437,53.288-30.781c-5.345,20.117-15.848,38.353-30.78,53.287
+                          c-14.932,14.934-33.171,25.437-53.288,30.783C272.202,417.948,282.704,399.709,297.636,384.777z M323.573,55.625
+                          c3.497-3.498,8.148-5.424,13.096-5.424s9.599,1.926,13.097,5.426c3.498,3.497,5.424,8.148,5.424,13.096
+                          c0,4.947-1.926,9.598-5.424,13.096c-1.909,1.908-11.743,9.978-55.504,42.258l-12.947-12.947
+                          C313.597,67.366,321.665,57.533,323.573,55.625z M256.002,16.787c10.212,0,18.52,8.308,18.52,18.521
+                          c0,2.699-1.248,15.359-9.366,69.128h-18.31c-8.118-53.769-9.366-66.428-9.366-69.128C237.48,25.095,245.789,16.787,256.002,16.787
+                          z M162.239,81.819c-7.224-7.222-7.224-18.972-0.002-26.194c3.498-3.498,8.149-5.424,13.097-5.424
+                          c4.948,0,9.599,1.926,13.097,5.426c1.908,1.907,9.976,11.74,42.257,55.503l-12.946,12.947
+                          C173.981,91.796,164.147,83.727,162.239,81.819z M141.919,167.91c-10.212,0.001-18.521-8.307-18.521-18.52
+                          s8.308-18.521,18.521-18.521c2.699,0,15.359,1.247,69.127,9.366v18.31C157.278,166.663,144.619,167.91,141.919,167.91z
+                           M188.43,243.154c-3.498,3.498-8.149,5.424-13.097,5.424s-9.599-1.926-13.097-5.426c-7.222-7.221-7.221-18.971,0-26.192
+                          c1.909-1.909,11.743-9.978,55.504-42.258l12.946,12.947C198.406,231.413,190.337,241.246,188.43,243.154z M256.002,281.993
+                          c-10.212,0-18.521-8.308-18.521-18.522c0-2.699,1.248-15.359,9.366-69.128h18.31c8.118,53.769,9.366,66.428,9.366,69.128
+                          C274.522,273.685,266.214,281.993,256.002,281.993z M256.001,177.557c-15.531,0-28.167-12.636-28.167-28.167
+                          s12.636-28.167,28.167-28.167s28.167,12.636,28.167,28.167S271.532,177.557,256.001,177.557z M349.766,216.96
+                          c3.497,3.499,5.424,8.151,5.424,13.097c0,4.948-1.926,9.599-5.424,13.097c-3.498,3.498-8.149,5.424-13.097,5.424
+                          s-9.598-1.926-13.096-5.426c-1.908-1.907-9.976-11.74-42.257-55.503l12.947-12.947
+                          C338.024,206.983,347.858,215.053,349.766,216.96z M300.956,158.545v-18.31c53.768-8.119,66.428-9.366,69.128-9.366
+                          c10.212-0.001,18.52,8.307,18.52,18.52s-8.308,18.521-18.52,18.521C367.385,167.911,354.725,166.664,300.956,158.545z"/>
+                  </svg>
+              </p>
+          </div>
+          <div class="amenitytitle">
+            <h5 translate="AMENITIES_garden"></h5>
+          </div>
+          <div class="moreinfo">
+            <p translate="AMENITIES_gardeninfo"></p>
+          </div>
+      </div>
+  </div>
+<!-- ++++++++++++++++++++++++++++++ OUR AMENITIES END ++++++++++++++++++++++++++++++++++++++-->
+    <br><br><br>
+
+    <!-- ++++++++++++++++++++++++++++++ OUR REVIEWS  ++++++++++++++++++++++++++++++++++++++-->
+      <div class="row titlerow">
+        <div class="col-sm-5 col-xs-4"><hr></div>
+        <div class="col-sm-2 col-xs-4"><h2 class="text-center" style="color: #5e5e5e" translate="REVIEWS_title"></h2></div>
+        <div class="col-sm-5 col-xs-4"><hr></div>
+      </div>
+      <div class="container">
+        <div class="row reviews2 justify-content-center">
+          <div class="col-xs-6 col-sm-6 col-sm-offset-3" style="display: flex; justify-content: center;">
+            <div id="TA_cdsratingsonlynarrow422" class="TA_cdsratingsonlynarrow">
+              <ul id="VxROHitY" class="TA_links VrgnLtl6">
+                <li id="jam1Mx6" class="buslrFK9it29">
+                <a target="_blank" href="https://www.tripadvisor.com/">
+                  <img src="https://www.tripadvisor.com/img/cdsi/img2/branding/tripadvisor_logo_transp_340x80-18034-2.png" alt="TripAdvisor"/>
+                </a>
+              </li>
+              </ul>
+            </div>
+            <script src="https://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=422&amp;locationId=3140630&amp;lang=en_US&amp;border=true&amp;display_version=2"></script>
+          </div>
+        </div>
+      </div>
+    <!-- ++++++++++++++++++++++++++++++ OUR REVIEWS 2 END ++++++++++++++++++++++++++++++++++++++-->
+    <br>
+    <br>
+    <br>
     <!-- ++++++++++++++++++++++++++++++++++++++  FOOTER  +++++++++++++++++++++++++++++++++-->
       <div class="footer">
         <div class="row footertext">
@@ -130,9 +539,9 @@
           <!-- SOCIAL MEDIA ****** CHANGE WITH THE DIFFERENT LANGUAGES ********-->
             <div class="col-sm-6">
               <span translate="FOOTER_asseenon"></span>
-                <a href="https://www.facebook.com/BedAndBreakfastLAlbergoDiIeri/" target="_blank"><img src="http://www.albergodiieri.com/img/svg/social-media.svg" style="height: 24px;"></a>
+                <a href="https://www.facebook.com/BedAndBreakfastLAlbergoDiIeri/" target="_blank"><img src="img/svg/social-media.svg" style="height: 24px;"></a>
                 <a href="https://www.airbnb.com/rooms/14165433?sug=50" target="_blank"><img src="img/svg/airbnb.svg" style="height: 24px;"></a>
-                <a href="https://www.tripadvisor.com/Hotel_Review-g887086-d3140630-Reviews-L_Albergo_di_Ieri-Serravalle_di_Chienti_Province_of_Macerata_Marche.html" target="_blank"><img src="http://www.albergodiieri.com/img/svg/tripadvisor-logotype.svg" style="height: 24px;"></a>
+                <a href="https://www.tripadvisor.com/Hotel_Review-g887086-d3140630-Reviews-L_Albergo_di_Ieri-Serravalle_di_Chienti_Province_of_Macerata_Marche.html" target="_blank"><img src="img/svg/tripadvisor-logotype.svg" style="height: 24px;"></a>
                 <a href="http://www.booking.com/hotel/it/albergo-di-ieri.html?aid=357001;label=gog235jc-hotel-XX-it-albergoNdiNieri-unspec-pt-com-L%3Apt-O%3AosSx-B%3Achrome-N%3AXX-S%3Abo-U%3Asalo;sid=e13b4cdc80a777e3498bf3cb48fd0b24;dist=0&group_adults=2&sb_price_type=total&type=total&" target="_blank"><img src="img/svg/booking.png" style="height: 16px;"></a>
             </div>
           <!-- SOCIAL MEDIA END -->
@@ -140,5 +549,13 @@
         </div>
       </div>
     <!-- ++++++++++++++++++++++++++++++++++++++  FOOTER END +++++++++++++++++++++++++++++++++-->
-</body>
+
+    <!-- ++++++++++++++++++++++++++++++++++  JAVASCRIPT LINKS  +++++++++++++++++++++++++++++++++-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="bootstrap-datepicker.min.js"></script>
+        <script src="validator.js"></script>
+        <script src="override.js"></script>
+    <!-- ++++++++++++++++++++++++++++++++++  JAVASCRIPT LINKS END  +++++++++++++++++++++++++++++++++-->
+  </body>
 </html>

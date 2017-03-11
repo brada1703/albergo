@@ -6,13 +6,6 @@ $data           = array();      // array to pass back data
 // validate the variables ======================================================
     if (empty($_POST['email']))
         $errors['email'] = 'Email is required.';
-
-    if (empty($_POST['startDate']))
-        $errors['startDate'] = 'Start date is required.';
-
-    if (empty($_POST['endDate']))
-        $errors['endDate'] = 'End date is required.';
-
 // return a response ===========================================================
 
     // response if there are errors
